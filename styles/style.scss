@@ -1,0 +1,12 @@
+$primaryButton: red;
+
+
+header {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    button {
+        background: $primaryButton;
+    }
+}
+
