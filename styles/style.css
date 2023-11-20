@@ -8,9 +8,24 @@ header button {
   background: red;
 }
 
-.navbar {
-  display: flex;
+.navbar ul {
+  display: block;
+  list-style-type: none;
+  background-color: gray;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
 }
 .navbar a {
-  color: azure;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a :hover {
+  background-color: black;
+}
+.navbar li {
+  float: left;
 }/*# sourceMappingURL=style.css.map */
