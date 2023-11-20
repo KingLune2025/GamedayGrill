@@ -9,9 +9,13 @@ header button {
 h1{
   color: brown;
   font: exo;
-
-
 }
+.navbar {
+  display: flex;
+}
+.navbar a {
+  color: azure;
+}/*# sourceMappingURL=style.css.map */
 
 
 
