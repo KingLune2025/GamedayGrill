@@ -1,7 +1,8 @@
 header {
-  background: lightblue;
+  background: white;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 header button {
   background: red;
