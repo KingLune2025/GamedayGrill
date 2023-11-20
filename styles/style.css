@@ -5,4 +5,30 @@ header {
 }
 header button {
   background: red;
+<<<<<<< HEAD
 }/*# sourceMappingURL=style.css.map */
+=======
+}
+h1{
+  color: brown;
+  font: exo;
+}
+.navbar {
+  display: flex;
+}
+.navbar a {
+  color: azure;
+}/*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 66a2392a357d4b87738c596ec3f6009e9834f75c
