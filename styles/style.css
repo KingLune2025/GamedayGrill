@@ -5,26 +5,27 @@ header {
 }
 header button {
   background: red;
+}/*# sourceMappingURL=style.css.map */
 }
-
-.navbar ul {
-  display: block;
-  list-style-type: none;
-  background-color: gray;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
+h1{
+  color: brown;
+  font: exo;
+}
+.navbar {
+  display: flex;
 }
 .navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 15px;
-  display: block;
-  text-align: center;
-}
-.navbar a :hover {
-  background-color: black;
-}
-.navbar li {
-  float: left;
+  color: azure;
 }/*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+
+
+
+
+
