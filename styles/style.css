@@ -1,17 +1,31 @@
 header {
-  background: white;
+  background: lightblue;
   display: flex;
   justify-content: center;
-  text-align: center;
 }
 header button {
   background: red;
 }/*# sourceMappingURL=style.css.map */
 }
 
-.navbar {
-  display: flex;
+.navbar ul {
+  display: block;
+  list-style-type: none;
+  background-color: gray;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
 }
 .navbar a {
-  color: azure;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a :hover {
+  background-color: black;
+}
+.navbar li {
+  float: left;
 }/*# sourceMappingURL=style.css.map */
