@@ -5,30 +5,26 @@ header {
 }
 header button {
   background: red;
-<<<<<<< HEAD
-}/*# sourceMappingURL=style.css.map */
-=======
 }
-h1{
-  color: brown;
-  font: exo;
-}
-.navbar {
-  display: flex;
+
+.navbar ul {
+  display: block;
+  list-style-type: none;
+  background-color: gray;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
 }
 .navbar a {
-  color: azure;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+.navbar a :hover {
+  background-color: black;
+}
+.navbar li {
+  float: left;
 }/*# sourceMappingURL=style.css.map */
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 66a2392a357d4b87738c596ec3f6009e9834f75c
