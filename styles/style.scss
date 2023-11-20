@@ -10,27 +10,34 @@ header {
     }
     
 }
+// .navbar {
+//     ul{
+//         display: block;
+//         list-style-type: none;
+//         background-color: gray;
+//         padding: 0px;
+//         margin: 0px;   
+//         overflow: hidden;
+//     }
+//     a{
+//         color: white;
+//         text-decoration: none;
+//         padding: 15px;
+//         display: block;
+//         text-align: center;
+//         :hover {
+//             background-color: black;
+//         }
+//     }
+//     li{
+//         float:left;
+//     }
+// }
 .navbar {
-    ul{
-        display: block;
-        list-style-type: none;
-        background-color: gray;
-        padding: 0px;
-        margin: 0px;   
-        overflow: hidden;
-    }
-    a{
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-        text-align: center;
-        :hover {
-            background-color: black;
-        }
-    }
-    li{
-        float:left;
+    display: flex;
+    a {
+        color: azure;
+        
     }
 }
 h1{
