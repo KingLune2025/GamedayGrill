@@ -10,7 +10,7 @@ header button {
 .navbar ul {
   display: block;
   list-style-type: none;
-  background-color: gray;
+  background-color: black;
   padding: 0px;
   margin: 0px;
   overflow: hidden;
@@ -27,4 +27,16 @@ header button {
 }
 .navbar li {
   float: left;
+}
+
+footer {
+  background-color: black;
+  padding: 40px;
+}
+footer h2 {
+  color: white;
+}
+footer p {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

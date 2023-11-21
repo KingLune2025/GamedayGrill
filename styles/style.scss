@@ -14,7 +14,7 @@ header {
     ul{
         display: block;
         list-style-type: none;
-        background-color: gray;
+        background-color: black;
         padding: 0px;
         margin: 0px;   
         overflow: hidden;
@@ -31,5 +31,17 @@ header {
     }
     li{
         float:left;
+    }
+}
+
+footer {
+    background-color: black;
+    padding: 40px;
+    h2{
+        color: white;
+    }
+    p{
+        color: white;
+        text-decoration: none;
     }
 }
