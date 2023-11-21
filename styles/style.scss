@@ -1,66 +1,145 @@
-$primaryButton: red;
+$shadow-color: rgba(0,0,0,0.2);
 
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: sans-serif;
+}
 
 header {
     background: lightblue;
     display: flex;
     justify-content: center;
-    button {
-        background: $primaryButton;
-    }
     
 }
+
 .navbar {
     background-color: black;
     ul{
         display: block;
         list-style-type: none;
-       
+        background-color: lightgrey;
         padding: 0px;
         margin: 0px;   
         overflow: hidden;
     }
-    .nav{
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-        text-align: center;
-        .nav:hover {
-            background-color: red;
-        }
-    }
     li{
         float:left;
+        a{
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            text-align: center;
+            &.active {
+                background-color: lightgreen;
+            }
+            &::after {
+                content: '';
+                width: 0;
+                height: 2px;
+                background: orange;
+                display: block;
+                transition: 0.2s linear;
+            }
+            &:hover{
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
     }
     .social{
-       background-color: black;
-        float: inline-end;
-        padding-left: 5px;
-        padding-right: 5px;
-        img{
-            width: 30px;
-            height: 30px;
+        background-color: black;
+         float: inline-end;
+         padding-left: 5px;
+         padding-right: 5px;
+         img{
+             width: 30px;
+             height: 30px;
+         }
+     }
+}
+
+.menu {
+    width: 100%;
+    padding: 70px 0;
+    h1{
+        font-size: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        span{
+            color: darkgoldenrod;
+            margin-left: 15px;
+            ::after{
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: darkgoldenrod;
+                display: block;
+                position: relative;
+                bottom: 15px;
+            }
+        }        
+    }
+    .menu_box{
+        width: 95%;
+        margin: 0 auto;
+        .menu_card{
+            width: 325px;
+            height: 480px;
+            padding-top: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px $shadow-color;
+            border-radius: 15px;
+            .menu_info{
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .menu_image{
+                width: 300px;
+                height: 245px;
+                margin: 0 auto;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+                    object-fit: cover;
+                    object-position: center;
+                    transition: 0.3s;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+                        border-radius: 15px;
+                    }
+                }
+            }
         }
     }
 }
+
 .body{
     width:fit-content;
-        text-align: center;
-
-.location {
-    background-color: cyan;
-    width:50%;
-    float: left;    
-}
-.contact{
-    background-color: purple;
-    width: 50%;
-    float: left;
-    p{
-        padding: 20px;
-        padding-bottom: 5px;
-        border: 20px;
+    text-align: center;
+    .location {
+        background-color: cyan;
+        width:50%;
+        float: left;    
     }
-}   
+    .contact{
+        background-color: purple;
+        width: 50%;
+        float: left;
+        p{
+            padding: 20px;
+            padding-bottom: 5px;
+            border: 20px;
+        }
+    }
 }
