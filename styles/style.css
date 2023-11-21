@@ -1,10 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: sans-serif;
+}
+
 header {
   background: lightblue;
   display: flex;
   justify-content: center;
-}
-header button {
-  background: red;
 }
 
 .navbar {
@@ -13,51 +18,83 @@ header button {
 .navbar ul {
   display: block;
   list-style-type: none;
+  background-color: lightgrey;
   padding: 0px;
   margin: 0px;
   overflow: hidden;
 }
-.navbar .nav {
+.navbar li {
+  float: left;
+}
+.navbar li .nav {
   color: white;
   text-decoration: none;
   padding: 15px;
   display: block;
   text-align: center;
 }
-.navbar .nav .nav:hover {
+.nav .navbar li .nav.active {
   background-color: red;
 }
-.navbar li {
-  float: left;
-}
-.navbar .social {
-  background-color: black;
-  float: inline-end;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.navbar .social img {
-  width: 30px;
-  height: 30px;
+.navbar li .nav:hover {
+  background-color: orange;
 }
 
-.body {
-  width: -moz-fit-content;
-  width: fit-content;
-  text-align: center;
+.menu {
+  width: 100%;
+  padding: 70px 0;
 }
-.body .location {
-  background-color: cyan;
-  width: 50%;
-  float: left;
+.menu h1 {
+  font-size: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
-.body .contact {
-  background-color: purple;
-  width: 50%;
-  float: left;
+.menu h1 span {
+  color: darkgoldenrod;
+  margin-left: 15px;
 }
-.body .contact p {
-  padding: 20px;
-  padding-bottom: 5px;
-  border: 20px;
+.menu h1 span ::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: darkgoldenrod;
+  display: block;
+  position: relative;
+  bottom: 15px;
+}
+.menu .menu_box {
+  width: 95%;
+  margin: 0 auto;
+}
+.menu .menu_box .menu_card {
+  width: 325px;
+  height: 480px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+.menu .menu_box .menu_card .menu_info {
+  margin: 0 auto;
+  overflow: hidden;
+}
+.menu .menu_box .menu_card .menu_image {
+  width: 300px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+.menu .menu_box .menu_card .menu_image:hover img {
+  transform: scale(1.1);
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */
