@@ -11,39 +11,56 @@ header {
     
 }
 .navbar {
+    background-color: black;
     ul{
         display: block;
         list-style-type: none;
-        background-color: black;
+       
         padding: 0px;
         margin: 0px;   
         overflow: hidden;
     }
-    a{
+    .nav{
         color: white;
         text-decoration: none;
         padding: 15px;
         display: block;
         text-align: center;
-        :hover {
-            background-color: black;
+        .nav:hover {
+            background-color: red;
         }
     }
     li{
         float:left;
     }
-}
-h1{
-    text-align: center;
-}
-footer {
-    background-color: black;
-    padding: 40px;
-    h2{
-        color: white;
+    .social{
+       background-color: black;
+        float: inline-end;
+        padding-left: 5px;
+        padding-right: 5px;
+        img{
+            width: 30px;
+            height: 30px;
+        }
     }
+}
+.body{
+    width:fit-content;
+        text-align: center;
+
+.location {
+    background-color: cyan;
+    width:50%;
+    float: left;    
+}
+.contact{
+    background-color: purple;
+    width: 50%;
+    float: left;
     p{
-        color: white;
-        text-decoration: none;
+        padding: 20px;
+        padding-bottom: 5px;
+        border: 20px;
     }
+}   
 }

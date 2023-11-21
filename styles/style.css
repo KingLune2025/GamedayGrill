@@ -7,40 +7,57 @@ header button {
   background: red;
 }
 
+.navbar {
+  background-color: black;
+}
 .navbar ul {
   display: block;
   list-style-type: none;
-  background-color: black;
   padding: 0px;
   margin: 0px;
   overflow: hidden;
 }
-.navbar a {
+.navbar .nav {
   color: white;
   text-decoration: none;
   padding: 15px;
   display: block;
   text-align: center;
 }
-.navbar a :hover {
-  background-color: black;
+.navbar .nav .nav:hover {
+  background-color: red;
 }
 .navbar li {
   float: left;
 }
+.navbar .social {
+  background-color: black;
+  float: inline-end;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.navbar .social img {
+  width: 30px;
+  height: 30px;
+}
 
-h1 {
+.body {
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
 }
-
-footer {
-  background-color: black;
-  padding: 40px;
+.body .location {
+  background-color: cyan;
+  width: 50%;
+  float: left;
 }
-footer h2 {
-  color: white;
+.body .contact {
+  background-color: purple;
+  width: 50%;
+  float: left;
 }
-footer p {
-  color: white;
-  text-decoration: none;
+.body .contact p {
+  padding: 20px;
+  padding-bottom: 5px;
+  border: 20px;
 }/*# sourceMappingURL=style.css.map */
