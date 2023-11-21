@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body>
-
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        div{
+          display: flex;
+          justify-content: first baseline;
+          align-items:first baseline;
+          margin:10px;
     
+    
+        }
+        button{
+          border: none;
+          cursor: pointer;
+          appearance: none;
+          background-color: inherit;
+           transition: transform .7s ease-in-out;
+    
+        }
+        button:hover{
+          transform: rotate(360deg);
+    
+        }
+        img{
+          width: 160;
+          height: 70px;
+        }
+        </style>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>GameDay Bar and Grill</title>
+        <title>GameDay Grill</title>
         <link rel="stylesheet" href="styles/style.css">
     </head>
-    <body style="background-color: black;" >
-        <h1 style="color: orangered; text-align: center;">
-            Game Days & Events
-            <nav>
-                <a href="index.html"> Home</a>
-            </nav>
-        </h1>
+    <body>
+      <header>
+        <h1>GameDay Bar and Grill</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" >Home</a></li>
+            <li><a href="#">Ordering</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" class="active">Reservations</a></li>
+        </ul>
+    </nav>
+    <body >
         <hr size="15" style="color: bisque; background-color: bisque;">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&src=bWFuaml0Lm11bmdhcmFAZ21haWwuY29t&src=YmUwZGVkOWRlNGMzOWYxZDc1NzM0ZDg2NmU1N2VlZDI2Zjc0M2IxODM3NTliOGQ2NmYwY2I2NThlYTdkN2ZhYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTAxOTg3MjU1NjQ0OTAyNjI5MzkyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZmFtaWx5MDg4MDcyNTMwNTY5Njc0MzU2MjlAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%230083c6&color=%23E67C73&color=%2333B679&color=%23004d40&color=%23AD1457&color=%230B8043" style="border:solid 1px #777; align-self: center; align-items: center; " width="800" height="600" frameborder="0" scrolling="no"></iframe>
         <form action="/action_page.php">
