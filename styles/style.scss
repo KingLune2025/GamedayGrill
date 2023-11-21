@@ -27,17 +27,27 @@ header {
     }
     li{
         float:left;
-        .nav{
-            color: white;
+        a{
+            color: black;
             text-decoration: none;
             padding: 15px;
             display: block;
             text-align: center;
-        .nav    &.active {
-                background-color: red;
+            &.active {
+                background-color: lightgreen;
+            }
+            &::after {
+                content: '';
+                width: 0;
+                height: 2px;
+                background: orange;
+                display: block;
+                transition: 0.2s linear;
             }
             &:hover{
-                background-color: orange;
+                &::after {
+                    width: 100%;
+                }
             }
         }
     }

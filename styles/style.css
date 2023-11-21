@@ -26,18 +26,26 @@ header {
 .navbar li {
   float: left;
 }
-.navbar li .nav {
-  color: white;
+.navbar li a {
+  color: black;
   text-decoration: none;
   padding: 15px;
   display: block;
   text-align: center;
 }
-.nav .navbar li .nav.active {
-  background-color: red;
+.navbar li a.active {
+  background-color: lightgreen;
 }
-.navbar li .nav:hover {
-  background-color: orange;
+.navbar li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: orange;
+  display: block;
+  transition: 0.2s linear;
+}
+.navbar li a:hover::after {
+  width: 100%;
 }
 
 .menu {
