@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <body>
-
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        div{
+          display: flex;
+          justify-content: first baseline;
+          align-items:first baseline;
+          margin:10px;
     
+    
+        }
+        button{
+          border: none;
+          cursor: pointer;
+          appearance: none;
+          background-color: inherit;
+           transition: transform .7s ease-in-out;
+    
+        }
+        button:hover{
+          transform: rotate(360deg);
+    
+        }
+        img{
+          width: 160;
+          height: 70px;
+        }
+        </style>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>GameDay Bar and Grill</title>
+        <title>GameDay Grill</title>
         <link rel="stylesheet" href="styles/style.css">
     </head>
+    <body>
+      <header>
+        <h1>GameDay Bar and Grill</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" >Home</a></li>
+            <li><a href="#">Ordering</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#" class="active">Reservations</a></li>
+        </ul>
+    </nav>
     <body style="background-color: black;" >
         <h1 style="color: orangered; text-align: center;">
             Game Days & Events
