@@ -75,6 +75,9 @@ header {
 .menu .menu_box {
   width: 95%;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
 }
 .menu .menu_box .menu_card {
   width: 325px;
@@ -98,10 +101,8 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   transition: 0.3s;
 }
 .menu .menu_box .menu_card .menu_image:hover img {
@@ -110,7 +111,6 @@ header {
 }
 
 .body {
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }

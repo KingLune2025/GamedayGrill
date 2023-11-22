@@ -80,6 +80,10 @@ header {
     .menu_box{
         width: 95%;
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-gap: 15px;
+        
         .menu_card{
             width: 325px;
             height: 480px;
