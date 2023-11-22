@@ -151,11 +151,10 @@ footer{
     height: 60px;
 background-color: lightgray;
     .social{
-        padding: 0;
         border: none;
         background: none;
          float: inline-end;   
-        padding: 10px;
+        padding: 15px;
         i{
             &:hover{
                 color: red;
