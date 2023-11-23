@@ -74,10 +74,10 @@ header {
 }
 
 .majorevents .calendar {
-  float: right;
+  float: left;
 }
 .majorevents .questions {
-  float: left;
+  float: right;
 }
 
 footer {
