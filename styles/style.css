@@ -112,13 +112,6 @@ header {
   border-radius: 15px;
 }
 
-.majoreventsbody {
-  width: -moz-fit-content;
-  width: fit-content;
-  text-align: center;
-  float: left;
-}
-
 .body {
   width: -moz-fit-content;
   width: fit-content;
@@ -142,6 +135,19 @@ header {
 .block {
   width: 100%;
   height: 60px;
+}
+
+.majorevents {
+  background-color: black;
+  color: black;
+}
+.majorevents .calendar {
+  float: right;
+}
+.majorevents .questions {
+  position: fixed;
+  float: left;
+  top: 20;
 }
 
 footer {
