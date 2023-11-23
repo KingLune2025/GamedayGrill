@@ -147,6 +147,14 @@ header {
 {
     background-color: black;
     color: black;
+    .calender 
+    {
+        float: left;
+    }
+    .questions
+    {
+        float:right;
+    }
 }
 footer{
     position: fixed;
