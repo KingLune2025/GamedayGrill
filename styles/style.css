@@ -48,79 +48,13 @@ header {
   width: 100%;
 }
 
-.menu {
-  width: 100%;
-  padding: 70px 0;
-}
-.menu h1 {
-  font-size: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-.menu h1 span {
-  color: darkgoldenrod;
-  margin-left: 15px;
-}
-.menu h1 span ::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: darkgoldenrod;
-  display: block;
-  position: relative;
-  bottom: 15px;
-}
-.menu .menu_box {
-  width: 95%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 15px;
-}
-.menu .menu_box .menu_card {
-  width: 325px;
-  height: 480px;
-  padding-top: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-}
-.menu .menu_box .menu_card .menu_info {
-  margin: 0 auto;
-  overflow: hidden;
-}
-.menu .menu_box .menu_card .menu_image {
-  width: 300px;
-  height: 245px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.menu .menu_box .menu_card .menu_image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  transition: 0.3s;
-}
-.menu .menu_box .menu_card .menu_image:hover img {
-  transform: scale(1.1);
-  border-radius: 15px;
-}
-
 .majoreventsbody {
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
   float: left;
 }
 
 .body {
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
