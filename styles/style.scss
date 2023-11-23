@@ -145,6 +145,21 @@ header {
     height: 60px;
 }
 footer{
+    .logo{
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+        .must{
+                   
+        }
+        .image{
+            
+            padding: 2.5px;
+            width: 60px;
+            height: 55;
+        }
+    }
+    
     position: fixed;
     bottom: 0;
     width: 100%;

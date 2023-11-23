@@ -101,8 +101,10 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   transition: 0.3s;
 }
 .menu .menu_box .menu_card .menu_image:hover img {
@@ -111,6 +113,7 @@ header {
 }
 
 .body {
+  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
@@ -141,12 +144,21 @@ footer {
   height: 60px;
   background-color: lightgray;
 }
+footer .logo {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+}
+footer .logo .image {
+  padding: 2.5px;
+  width: 60px;
+  height: 55;
+}
 footer .social {
-  padding: 0;
   border: none;
   background: none;
   float: inline-end;
-  padding: 10px;
+  padding: 15px;
 }
 footer .social i:hover {
   color: red;
