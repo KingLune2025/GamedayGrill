@@ -1,35 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        *{
-          margin: 0;
-          padding: 0;
-        }
-        div{
-          display: flex;
-          justify-content: first baseline;
-          align-items:first baseline;
-          margin:10px;
-    
-    
-        }
-        button{
-          border: none;
-          cursor: pointer;
-          appearance: none;
-          background-color: inherit;
-           transition: transform .7s ease-in-out;
-    
-        }
-        button:hover{
-          transform: rotate(360deg);
-    
-        }
-        img{
-          width: 160;
-          height: 70px;
-        }
-        </style>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,13 +19,28 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
-    <body >
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FChicago&src=bWFuaml0Lm11bmdhcmFAZ21haWwuY29t&src=YmUwZGVkOWRlNGMzOWYxZDc1NzM0ZDg2NmU1N2VlZDI2Zjc0M2IxODM3NTliOGQ2NmYwY2I2NThlYTdkN2ZhYUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y2xhc3Nyb29tMTAxOTg3MjU1NjQ0OTAyNjI5MzkyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZmFtaWx5MDg4MDcyNTMwNTY5Njc0MzU2MjlAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%230083c6&color=%23E67C73&color=%2333B679&color=%23004d40&color=%23AD1457&color=%230B8043" style="border:solid 1px #777; align-self: center; align-items: center; " width="800" height="600" frameborder="0" scrolling="no"></iframe>
-        <form action="/action_page.php">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your First Name..">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your Last Name..">
-
-    </body>
+    <body class="majorevents">
+        <form  action="/action_page.php">
+            <label class="questions"for="fname">First Name</label>
+            <input class="questions" type="text" id="fname" name="firstname" placeholder="Your First Name..">
+            <label class="questions" for="lname">Last Name</label>
+            <input class="questions" ype="text" id="lname" name="lastname" placeholder="Your Last Name..">
+        </form>
+        <iframe src="https://calendar.google.com/calendar/embed?src=be0ded9de4c39f1d75734d866e57eed26f743b183759b8d66f0cb658ea7d7faa%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </body class="majorevents">
+    <footer class="footer">
+        <hr>
+        <button class="social">
+          
+        </button>
+        <button class="social">
+          <a href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">  <i class="fa-brands fa-instagram"></i></a>
+        </button>
+            <button class="social">
+            <a href="https://www.facebook.com/LHSRedhawks" target="_blank">  <i class="fa-brands fa-facebook"></i></a>
+            </button>
+              <button class="social">
+                <a href="https://x.com/LHSRedhawks?s=20" target="_blank">  <i class="fa-brands fa-twitter"></i></a>
+            </button>
+      </footer>
 </html>

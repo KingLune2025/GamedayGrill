@@ -7,6 +7,91 @@
         <title>GameDay Bar and Grill</title>
         <link rel="stylesheet"type="text/css" href="styles/style.css" />
         <script src="https://kit.fontawesome.com/f56d86f1b3.js" crossorigin="anonymous"></script>
+
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+    
+            .menu {
+                width: 100%;
+                padding: 70px 0;
+            }
+    
+            .menu h1 {
+                font-size: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+    
+            .menu h1 span {
+                color: darkgoldenrod;
+                margin-left: 15px;
+            }
+    
+            .menu h1 span::after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: darkgoldenrod;
+                display: block;
+                position: relative;
+                bottom: 15px;
+            }
+    
+            .menu_box {
+                width: 95%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-gap: 15px;
+            }
+    
+            .menu_box h2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .menu_card {
+                width: 325px;
+                height: 480px;
+                padding-top: 10px;
+                margin-bottom: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                border-radius: 15px;
+            }
+    
+            .menu_info {
+                margin: 0 auto;
+                overflow: hidden;
+            }
+    
+            .menu_image {
+                width: 300px;
+                height: 245px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+    
+            .menu_image img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                object-fit: cover;
+                object-position: center;
+                transition: 0.3s;
+            }
+    
+            .menu_image:hover img {
+                transform: scale(1.1);
+                border-radius: 15px;
+            }
+        </style>
+
     </head>
     <body>
         <!-- Title -->
@@ -20,16 +105,6 @@
                 <li><a href="#" class="active">Ordering</a></li>
                 <li><a href="Major Events.html">Booking</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                
-                <button class="social">
-                    <a href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"> <img src="https://static.vecteezy.com/system/resources/previews/014/414/683/non_2x/instagram-black-logo-on-transparent-background-free-vector.jpg" alt="buttonpng"border="0" /></a>
-                </button >
-                <button class="social">
-                    <a href=https://www.facebook.com/LHSRedhawks target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"/></a>
-                </button>
-                <button class="social">
-                    <a href=https://twitter.com/LHSRedhawks target="_blank"> <img src="https://image.pngaaa.com/234/1277234-middle.png" /> </a>
-                </button>
             </ul>
         </nav>
         <hr>
@@ -37,78 +112,215 @@
         <div class="menu" id="Menu">
             <h1>Our<span> Menu</span></h1>
             <div class="menu_box">
-                            
-                <!-- Burger Card -->
+                
+                <h2>Pre-Game Appetizers</h2>
+                <!-- Hot Dogs -->
                 <div class="menu_card">
                     
                     <div class="menu_image">
-                        <img src="burger_temp.jpg">
+                        <img src="images/menu_items/hot-dog.png">
                     </div>
 
                     <div class="menu_info">
-                        <h2>Burger</h2>
+                        <h2>Texan Twister Dog</h2>
                         <p>
-                            Tasty
+                            A fiery fusion of smoked sausage, jalapeños, and spicy chili, delivering a taste tornado in every bite.
                         </p>
-                        <h3>$20.00</h3>
+                        <h3>$11.99</h3>
                         <a href="#" class="menu_btn">Order Now</a>
                     </div>
                 </div>
 
-                <!-- Burger Card -->
+                <!-- Nirvana Nachos -->
                 <div class="menu_card">
                     
                     <div class="menu_image">
-                        <img src="burger_temp.jpg">
+                        <img src="images/menu_items/nachos.jpeg">
                     </div>
 
                     <div class="menu_info">
-                        <h2>Burger</h2>
+                        <h2>Nirvana Nachos</h2>
                         <p>
-                            Tasty
+                            Crispy tortilla chips enhanced with queso, jalapeños, and your choice of protein.
                         </p>
-                        <h3>$20.00</h3>
+                        <h3>$11.99</h3>
                         <a href="#" class="menu_btn">Order Now</a>
                     </div>
                 </div>
 
-                <!-- Burger Card -->
+                <!-- Fajitas -->
                 <div class="menu_card">
                     
                     <div class="menu_image">
-                        <img src="burger_temp.jpg">
+                        <img src="images/menu_items/fajitas.jpeg">
                     </div>
 
                     <div class="menu_info">
-                        <h2>Burger</h2>
+                        <h2>Mummy's Fajitas</h2>
                         <p>
-                            Tasty
+                            Unleash the sizzle with our mouthwatering  fajitas, bursting with grilled goodness and vibrant Tex-Mex flavors. Offered in veg or chicken varieties. Rawr!
                         </p>
-                        <h3>$20.00</h3>
+                        <h3>$13.99</h3>
                         <a href="#" class="menu_btn">Order Now</a>
                     </div>
                 </div>
 
-                <!-- Burger Card -->
+                <h2>Sides</h2>
+
+                <!-- Chili Cheese Fries -->
                 <div class="menu_card">
                     
                     <div class="menu_image">
-                        <img src="burger_temp.jpg">
+                        <img src="images/menu_items/chili-cheese-fries.jpg">
                     </div>
 
                     <div class="menu_info">
-                        <h2>Burger</h2>
+                        <h2>Smokin' Chili Cheese Fries</h2>
                         <p>
-                            Tasty
+                            Crispy fries smothered in savory chili and melted cheddar cheese for a taste explosion!
                         </p>
-                        <h3>$20.00</h3>
+                        <h3>$11.99</h3>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Golden Fries -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/fries.jpeg">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Golden Fries</h2>
+                        <p>
+                            Classic french fries served with a side of tangy ketchup.
+                        </p>
+                        <h3>$7.99</h3>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Wings -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/wings.png">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Zesty Wings</h2>
+                        <p>
+                            Dive into flavor with our 8 Piece Zesty Wings, where succulent buffalo wings meet a symphony of bold and tangy spices. Offered in boneless or bone varieties. Mmm, zesty!
+                        </p>
+                        <h3>$13.99</h3>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+
+                <h2>Half-Time Meals</h2>
+                
+                <!-- Burger -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/burger.jpg">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>The 6-Pointer</h2>
+                        <p>
+                            Angus beef perfection crowned with melted American cheese, lettuce, tomato, and onion.
+                        </p>
+                        <h3>$19.99</h3>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Ribs -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/ribs.jpeg">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Texas Rib Rack</h2>
+                        <p>
+                            Succulent ribs slow-cooked to perfection, dancing with a signature smoky Texas flavor.
+                        </p>
+                        <h3>$18.99</h3>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+               
+                <!-- Pulled Pork Sandwich -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/pp-sandwich.jpeg">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>The ACL Explosion</h2>
+                        <p>
+                            Wham! Treat yourself to some slow-smoked pulled pork perfection, piled high and dripping with tangy barbecue bliss on a toasted bun.
+                        </p>
+                        <h3>$19.99</h3>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+
+                <h2>Victory Desserts</h2>
+
+                <!-- Lava cake -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/lava-cake.jpeg">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Molten Volcano Cake</h2>
+                        <p>
+                            A decadent eruption of warm, gooey chocolate bliss concealed within a perfectly baked lava cake.
+                        </p>
+                        <h3>$7.99</h3>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Ice Cream -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/ice-cream.png">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Ice Cream</h2>
+                        <p>
+                            Indulge in creamy bliss with our decadent ice cream, a delightful treat for your taste buds. Offered in Vanilla, Strawberry, and Chocolate flavors.
+                        </p>
+                        <h3>$3.99</h3>
                         <a href="#" class="menu_btn">Order Now</a>
                     </div>
                 </div>
 
             </div>
         </div>
-
-	    <script src="index.js"></script>
+        <footer class="footer">
+            <hr>
+            <button class="social"></button>
+            <button class="social">
+              <a href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">  <i class="fa-brands fa-instagram"></i></a>
+              </button>
+              <button class="social">
+                <a href="https://www.facebook.com/LHSRedhawks" target="_blank">  <i class="fa-brands fa-facebook"></i></a>
+                </button>
+                  <button class="social">
+                    <a href="https://x.com/LHSRedhawks?s=20" target="_blank">  <i class="fa-brands fa-twitter"></i></a>
+                    </button>
+        </footer>
     </body>
 </html>
