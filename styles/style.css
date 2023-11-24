@@ -79,6 +79,7 @@ header {
 .majorevents .questions {
   float: right;
   text-align: left;
+  text-transform: uppercase;
 }
 
 footer {
