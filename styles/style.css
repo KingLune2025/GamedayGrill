@@ -74,8 +74,6 @@ header {
 }
 
 .majorevents {
-  width: -moz-fit-content;
-  width: fit-content;
   text-align: center;
 }
 .majorevents .calendar {
