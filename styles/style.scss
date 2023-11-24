@@ -151,17 +151,23 @@ header {
 }
 .majorevents
 {
+    width:fit-content;
+    text-align: center;
     .calendar 
     {
-        position: relative;
-        left: 0%;
-        top: 0%;
+        
+        width:50%;
+        float: left; 
+        padding-bottom: 60px;   
     }
     .questions
     {
-        position: relative;
-        left: 55%;
-        top:5%;
+       
+        width: 50%;
+        float: left;
+        padding: 20px;
+        padding-bottom: 5px;
+        border: 20px;
     }
 }
 footer{

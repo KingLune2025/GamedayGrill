@@ -73,15 +73,22 @@ header {
   height: 60px;
 }
 
+.majorevents {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
 .majorevents .calendar {
-  position: relative;
-  left: 0%;
-  top: 0%;
+  width: 50%;
+  float: left;
+  padding-bottom: 60px;
 }
 .majorevents .questions {
-  position: relative;
-  left: 55%;
-  top: 5%;
+  width: 50%;
+  float: left;
+  padding: 20px;
+  padding-bottom: 5px;
+  border: 20px;
 }
 
 footer {
