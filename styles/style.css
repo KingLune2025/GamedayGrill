@@ -78,7 +78,7 @@ header {
 }
 .majorevents .calendar {
   width: 50%;
-  float: left;
+  float: right;
   padding-bottom: 60px;
 }
 .majorevents .questions {
