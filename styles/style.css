@@ -49,7 +49,6 @@ header {
 }
 
 .body {
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
