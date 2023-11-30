@@ -14,7 +14,7 @@
                 margin: 0;
                 font-family: Arial, sans-serif;
             }
-            .menu_order {
+            .menu_order_ubereats {
                 display: block;
                 align-items: center;
                 justify-content: center;
@@ -24,7 +24,29 @@
                 margin-right: 50px;
                 margin-top: 30px;
                 border-radius: 10px;
+                background-color: lightgreen;
             }
+            .menu_order_ubereats:active {
+                background-color: #3FC060;
+
+            }
+            .menu_order_grubhub {
+                display: block;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto;
+                margin-bottom: 0px;
+                font-size: 50px;
+                margin-right: 50px;
+                margin-top: 30px;
+                border-radius: 10px;
+                background-color: orange;
+            }
+            .menu_order_grubhub:active {
+                background-color: darkorange;
+
+            }
+
             .menu {
                 width: 100%;
                 padding: 70px 0;
@@ -115,7 +137,8 @@
             </ul>
         </nav>
         <hr>
-        <button class="menu_order"><a href="https://www.ubereats.com" target="_blank">  <iconify-icon icon="simple-icons:ubereats"></iconify-icon></a></button>    
+        <button class="menu_order_ubereats"><a href="https://www.ubereats.com" target="_blank">  <iconify-icon icon="simple-icons:ubereats" style="color: black;"></iconify-icon></a></button>
+        <button class="menu_order_grubhub"><a href="https://www.ubereats.com" target="_blank">  <iconify-icon icon="simple-icons:grubhub" style="color: black;"></iconify-icon></a></button>        
         <!-- Menu -->
         <div class="menu" id="Menu">
             <h1>Our<span> Menu</span></h1>
@@ -311,6 +334,23 @@
                             Indulge in creamy bliss with our decadent ice cream, a delightful treat for your taste buds. Offered in Vanilla, Strawberry, and Chocolate flavors.
                         </p>
                         <h3>$3.99</h3>
+                        
+                    </div>
+                </div>
+
+                <!-- Peach Cobbler -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/peach-cobbler.jpeg">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Peach Cobbler</h2>
+                        <p>
+                            Juicy peaches nestled beneath a golden-brown crust, served warm and topped with a scoop of vanilla ice cream.
+                        </p>
+                        <h3>$5.99</h3>
                         
                     </div>
                 </div>
