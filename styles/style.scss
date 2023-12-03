@@ -127,22 +127,26 @@ header {
 .body{
     width:fit-content;
     text-align: center;
-    .location {
-        
-        width:50%;
-        float: left; 
-        padding-bottom: 60px;   
+    .map{
+        width: 100%;
     }
-    .contact{
-       
-        width: 50%;
-        float: left;
-        p{
-            padding: 20px;
-            padding-bottom: 5px;
-            border: 20px;
+    @media (min-width: 1000px) {
+        .location {
+            width:50%;
+            float: left; 
+            padding-bottom: 60px;   
         }
+        .contact{ 
+            width: 50%;
+            float: left;
+            p{
+                padding: 20px;
+                padding-bottom: 5px;
+                border: 20px;
+            }
+        }   
     }
+    
 }
 .block
 {   

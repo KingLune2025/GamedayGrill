@@ -53,19 +53,24 @@ header {
   width: fit-content;
   text-align: center;
 }
-.body .location {
-  width: 50%;
-  float: left;
-  padding-bottom: 60px;
+.body .map {
+  width: 100%;
 }
-.body .contact {
-  width: 50%;
-  float: left;
-}
-.body .contact p {
-  padding: 20px;
-  padding-bottom: 5px;
-  border: 20px;
+@media (min-width: 1000px) {
+  .body .location {
+    width: 50%;
+    float: left;
+    padding-bottom: 60px;
+  }
+  .body .contact {
+    width: 50%;
+    float: left;
+  }
+  .body .contact p {
+    padding: 20px;
+    padding-bottom: 5px;
+    border: 20px;
+  }
 }
 
 .block {
