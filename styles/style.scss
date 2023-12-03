@@ -155,13 +155,21 @@ header {
 }
 .majorevents
 {
+    text-align: center;
     .calendar 
     {
-        float: left;
+        
+        width:50%;
+        float: right; 
+        padding-bottom: 60px;   
     }
     .questions
     {
-        float: center;
+        width: 50%;
+        float: left;
+        padding: 20px;
+        padding-bottom: 5px;
+        border: 20px;
     }
 }
 footer{
@@ -184,7 +192,7 @@ footer{
     bottom: 0;
     width: 100%;
     height: 60px;
-background-color: lightgray;
+    background-color: lightgray;
     .social{
         border: none;
         background: none;

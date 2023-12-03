@@ -7,77 +7,106 @@
         <title>GameDay Bar and Grill</title>
         <link rel="stylesheet"type="text/css" href="styles/style.css" />
         <script src="https://kit.fontawesome.com/f56d86f1b3.js" crossorigin="anonymous"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
         <style>
             body {
                 margin: 0;
                 font-family: Arial, sans-serif;
             }
-    
+            .menu_order_ubereats {
+                display: block;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto;
+                margin-bottom: 0px;
+                font-size: 50px;
+                margin-right: 50px;
+                margin-top: 30px;
+                border-radius: 10px;
+                background-color: lightgreen;
+            }
+            .menu_order_ubereats:active {
+                background-color: #3FC060;
+
+            }
+            .menu_order_grubhub {
+                display: block;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto;
+                margin-bottom: 0px;
+                font-size: 50px;
+                margin-right: 50px;
+                margin-top: 30px;
+                border-radius: 10px;
+                background-color: orange;
+            }
+            .menu_order_grubhub:active {
+                background-color: darkorange;
+
+            }
+
             .menu {
                 width: 100%;
                 padding: 70px 0;
             }
-    
             .menu h1 {
                 font-size: 55px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                margin-right: 20px;
                 margin-bottom: 30px;
+                margin-top: -120px;
             }
-    
             .menu h1 span {
                 color: darkgoldenrod;
                 margin-left: 15px;
             }
-    
             .menu h1 span::after {
-                content: '';
+                content: "";
                 width: 100%;
                 height: 2px;
                 background: darkgoldenrod;
                 display: block;
                 position: relative;
-                bottom: 15px;
+                bottom: 9px;
             }
-    
-            .menu_box {
+            .menu .menu_box {
                 width: 95%;
                 margin: 0 auto;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-gap: 15px;
             }
-    
-            .menu_box h2 {
+            .menu .menu_box h2 {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
-    
-            .menu_card {
+            .menu .menu_box .menu_card {
                 width: 325px;
-                height: 480px;
+                height: 440px;
                 padding-top: 10px;
                 margin-bottom: 20px;
-                box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
                 border-radius: 15px;
             }
-    
-            .menu_info {
+            .menu .menu_box .menu_card .menu_info {
                 margin: 0 auto;
                 overflow: hidden;
+                text-align: center;
+                margin-top: 8px;
+                line-height: 21px;
             }
-    
-            .menu_image {
+            .menu .menu_box .menu_card .menu_image {
                 width: 300px;
                 height: 245px;
                 margin: 0 auto;
                 overflow: hidden;
             }
-    
-            .menu_image img {
+            .menu .menu_box .menu_card .menu_image img {
                 width: 100%;
                 height: 100%;
                 border-radius: 15px;
@@ -85,11 +114,11 @@
                 object-position: center;
                 transition: 0.3s;
             }
-    
-            .menu_image:hover img {
+            .menu .menu_box .menu_card .menu_image:hover img {
                 transform: scale(1.1);
                 border-radius: 15px;
             }
+
         </style>
 
     </head>
@@ -108,11 +137,13 @@
             </ul>
         </nav>
         <hr>
+        <button class="menu_order_ubereats"><a href="https://www.ubereats.com" target="_blank">  <iconify-icon icon="simple-icons:ubereats" style="color: black;"></iconify-icon></a></button>
+        <button class="menu_order_grubhub"><a href="https://www.ubereats.com" target="_blank">  <iconify-icon icon="simple-icons:grubhub" style="color: black;"></iconify-icon></a></button>        
         <!-- Menu -->
         <div class="menu" id="Menu">
             <h1>Our<span> Menu</span></h1>
             <div class="menu_box">
-                
+            
                 <h2>Pre-Game Appetizers</h2>
                 <!-- Hot Dogs -->
                 <div class="menu_card">
@@ -127,7 +158,7 @@
                             A fiery fusion of smoked sausage, jalapeños, and spicy chili, delivering a taste tornado in every bite.
                         </p>
                         <h3>$11.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -144,7 +175,7 @@
                             Crispy tortilla chips enhanced with queso, jalapeños, and your choice of protein.
                         </p>
                         <h3>$11.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -161,7 +192,7 @@
                             Unleash the sizzle with our mouthwatering  fajitas, bursting with grilled goodness and vibrant Tex-Mex flavors. Offered in veg or chicken varieties. Rawr!
                         </p>
                         <h3>$13.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -180,7 +211,7 @@
                             Crispy fries smothered in savory chili and melted cheddar cheese for a taste explosion!
                         </p>
                         <h3>$11.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -197,7 +228,7 @@
                             Classic french fries served with a side of tangy ketchup.
                         </p>
                         <h3>$7.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -214,7 +245,7 @@
                             Dive into flavor with our 8 Piece Zesty Wings, where succulent buffalo wings meet a symphony of bold and tangy spices. Offered in boneless or bone varieties. Mmm, zesty!
                         </p>
                         <h3>$13.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -233,7 +264,7 @@
                             Angus beef perfection crowned with melted American cheese, lettuce, tomato, and onion.
                         </p>
                         <h3>$19.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -250,7 +281,7 @@
                             Succulent ribs slow-cooked to perfection, dancing with a signature smoky Texas flavor.
                         </p>
                         <h3>$18.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
                
@@ -267,7 +298,7 @@
                             Wham! Treat yourself to some slow-smoked pulled pork perfection, piled high and dripping with tangy barbecue bliss on a toasted bun.
                         </p>
                         <h3>$19.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -286,7 +317,7 @@
                             A decadent eruption of warm, gooey chocolate bliss concealed within a perfectly baked lava cake.
                         </p>
                         <h3>$7.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
                     </div>
                 </div>
 
@@ -303,15 +334,37 @@
                             Indulge in creamy bliss with our decadent ice cream, a delightful treat for your taste buds. Offered in Vanilla, Strawberry, and Chocolate flavors.
                         </p>
                         <h3>$3.99</h3>
-                        <a href="#" class="menu_btn">Order Now</a>
+                        
+                    </div>
+                </div>
+
+                <!-- Peach Cobbler -->
+                <div class="menu_card">
+                    
+                    <div class="menu_image">
+                        <img src="images/menu_items/peach-cobbler.jpeg">
+                    </div>
+
+                    <div class="menu_info">
+                        <h2>Peach Cobbler</h2>
+                        <p>
+                            Juicy peaches nestled beneath a golden-brown crust, served warm and topped with a scoop of vanilla ice cream.
+                        </p>
+                        <h3>$5.99</h3>
+                        
                     </div>
                 </div>
 
             </div>
         </div>
         <footer class="footer">
-            <hr>
-            <button class="social"></button>
+            <div class="logo">
+              <img class="image" src="image-removebg-preview.png" alt="buttonpng"border="0" />
+              <a class="must" href="https://www.textstudio.com/">Font generator</a>
+            </div>
+            <button class="social">
+          
+            </button>
             <button class="social">
               <a href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank">  <i class="fa-brands fa-instagram"></i></a>
               </button>

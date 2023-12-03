@@ -49,7 +49,6 @@ header {
 }
 
 .body {
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
@@ -78,11 +77,20 @@ header {
   height: 60px;
 }
 
+.majorevents {
+  text-align: center;
+}
 .majorevents .calendar {
-  float: left;
+  width: 50%;
+  float: right;
+  padding-bottom: 60px;
 }
 .majorevents .questions {
-  float: center;
+  width: 50%;
+  float: left;
+  padding: 20px;
+  padding-bottom: 5px;
+  border: 20px;
 }
 
 footer {
