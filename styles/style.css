@@ -1,5 +1,7 @@
-html {
+html, body {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
 }
 
 * {
@@ -7,51 +9,185 @@ html {
 }
 
 header {
-  background: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin: -90px;
+}
+
+body {
+  padding: 15px;
+  border: 100px solid transparent;
+  -o-border-image: url(images/border.png) 10% stretch;
+     border-image: url(images/border.png) 10% stretch;
+  height: 100%;
+  width: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
 }
 
 .navbar {
-  background-color: black;
+  background-color: transparent;
 }
+
 .navbar ul {
   display: block;
   list-style-type: none;
-  background-color: lightgrey;
+  height: 80px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 0px;
+  padding-left: 80px;
   margin: 0px;
   overflow: hidden;
 }
+
 .navbar li {
   float: left;
+  padding-right: 40px;
 }
+
 .navbar li a {
-  color: black;
+  color: grey;
   text-decoration: none;
-  padding: 15px;
+  padding: 10px;
   display: block;
-  text-align: center;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
 }
+
+.navbar li a .address {
+  margin-left: auto;
+}
+
 .navbar li a.active {
-  background-color: lightgreen;
+  color: white;
 }
+
 .navbar li a::after {
-  content: "";
+  content: '';
   width: 0;
   height: 2px;
   background: orange;
   display: block;
+  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
+
 .navbar li a:hover::after {
   width: 100%;
 }
+<<<<<<< HEAD
+=======
+
+.navbar .social {
+  background-color: black;
+  float: inline-end;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navbar .social img {
+  width: 30px;
+  height: 30px;
+}
+
+nav.socials img {
+  height: 30px;
+  width: 30px;
+}
+
+.menu {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.menu h1 {
+  font-size: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.menu h1 span {
+  color: darkgoldenrod;
+  margin-left: 15px;
+}
+
+.menu h1 span ::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: darkgoldenrod;
+  display: block;
+  position: relative;
+  bottom: 15px;
+}
+
+.menu .menu_box {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.menu .menu_box .menu_card {
+  width: 325px;
+  height: 480px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.menu .menu_box .menu_card .menu_info {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image {
+  width: 300px;
+  height: 245px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-radius: 15px;
+}
+>>>>>>> 269c452 (oiooioi)
 
 .body {
   width: 100%;
   text-align: center;
 }
+<<<<<<< HEAD
 .body .map {
   width: 100%;
 }
@@ -88,10 +224,27 @@ header {
 .majorevents .questions {
   width: 50%;
   float: left;
+=======
+
+.body .location {
+  background-color: cyan;
+  width: 50%;
+  float: left;
+}
+
+.body .contact {
+  background-color: purple;
+  width: 50%;
+  float: left;
+}
+
+.body .contact p {
+>>>>>>> 269c452 (oiooioi)
   padding: 20px;
   padding-bottom: 5px;
   border: 20px;
 }
+<<<<<<< HEAD
 
 footer {
   position: fixed;
@@ -119,3 +272,6 @@ footer .social {
 footer .social i:hover {
   color: red;
 }/*# sourceMappingURL=style.css.map */
+=======
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 269c452 (oiooioi)
