@@ -1,5 +1,7 @@
-html {
+html, body {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
 }
 
 * {
@@ -29,48 +31,67 @@ body {
 }
 
 .navbar {
-  background-color: black;
+  background-color: transparent;
 }
+
 .navbar ul {
   display: block;
   list-style-type: none;
-  background-color: lightgrey;
+  height: 80px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 0px;
+  padding-left: 80px;
   margin: 0px;
   overflow: hidden;
 }
+
 .navbar li {
   float: left;
+  padding-right: 40px;
 }
+
 .navbar li a {
-  color: black;
+  color: grey;
   text-decoration: none;
-  padding: 15px;
+  padding: 10px;
   display: block;
-  text-align: center;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
 }
+
+.navbar li a .address {
+  margin-left: auto;
+}
+
 .navbar li a.active {
-  background-color: lightgreen;
+  color: white;
 }
+
 .navbar li a::after {
-  content: "";
+  content: '';
   width: 0;
   height: 2px;
   background: orange;
   display: block;
+  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
+
 .navbar li a:hover::after {
   width: 100%;
 }
-.social {
+
+.navbar .social {
   background-color: black;
   float: inline-end;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-.social img {
+.navbar .social img {
   width: 30px;
   height: 30px;
 }
@@ -160,7 +181,9 @@ nav.socials img {
 }
 
 .body {
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
 }
 
@@ -180,143 +203,5 @@ nav.socials img {
   padding: 20px;
   padding-bottom: 5px;
   border: 20px;
-}
-/*# sourceMahtml {
-  scroll-behavior: smooth;
-}
-
-* {
-  font-family: sans-serif;
-}
-
-header {
-  background: lightblue;
-  display: flex;
-  justify-content: center;
-}
-
-.navbar {
-  background-color: black;
-}
-.navbar ul {
-  display: block;
-  list-style-type: none;
-  background-color: lightgrey;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
-.navbar li {
-  float: left;
-}
-.navbar li a {
-  color: black;
-  text-decoration: none;
-  padding: 15px;
-  display: block;
-  text-align: center;
-}
-.navbar li a.active {
-  background-color: lightgreen;
-}
-.navbar li a::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: orange;
-  display: block;
-  transition: 0.2s linear;
-}
-.navbar li a:hover::after {
-  width: 100%;
-}
-
-.body {
-  width: fit-content;
-  text-align: center;
-}
-.body .map {
-  width: 100%;
-}
-@media (min-width: 1000px) {
-  .body .location {
-    width: 50%;
-    float: left;
-    padding-bottom: 60px;
-  }
-  .body .contact {
-    width: 50%;
-    float: left;
-  }
-  .body .contact p {
-    padding: 20px;
-    padding-bottom: 5px;
-    border: 20px;
-  }
-}
-
-.block {
-  width: 100%;
-  
-  text-align: center;
-}
-
-.body .location {
-  width: 50%;
-  float: left;
-  padding-bottom: 60px;
-}
-
-.body .contact {
-  width: 50%;
-  float: left;
-}
-
-.body .contact p {
-  padding: 20px;
-  padding-bottom: 5px;
-  border: 20px;
-}
-
-.block {
-  width: 100%;
-  height: 60px;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: transparent;
-}
-
-footer .logo {
-  position: absolute;
-  left: 50%;
-  bottom: 0%;
-}
-
-footer .logo .image {
-  color: grey;
-  padding: 2.5px;
-  width: 60px;
-  height: 55;
-}
-
-footer .social {
-  border: none;
-  background: none;
-  float: inline-end;
-  padding: 15px;
-}
-
-footer .social i:hover {
-  color: red;
-}
-
-footer a {
-  size: 100px;
-  
 }
 /*# sourceMappingURL=style.css.map */
