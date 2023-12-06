@@ -1,35 +1,47 @@
 $shadow-color: rgba(0,0,0,0.2);
 
-html, body {
-    scroll-behavior: smooth;
-    height: 100%;
-    margin: 0;
-}
 
-*{
-    font-family: sans-serif;
-}
 
-header {
+header.top {
     // background: lightblue;
      display: flex;
     justify-content: left;
     margin: -90px;
+    padding-top: 15px;
     //background-image: url(images/headerBG.png);
 }
 
-body{
-   
-   padding: 15px;
-   border: 100px solid transparent;
-   border-image: url(images/border.png) 10% stretch;
-   height: 100%;
-   width: auto;
-   box-sizing: border-box;
-   margin: 0; 
-    //overflow: hidden;
+body, html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
 }
-
+  
+ * {
+    font-family: sans-serif;
+}
+  
+  .megaContainer {
+     /* Fix the border in place */
+     //padding: 15px;
+    border: 100px solid transparent;
+    border-image: url(images/border.png) 10% stretch;
+    height: 100%;
+    width: auto;
+    box-sizing: border-box;
+   // margin: 90px; 
+    position: fixed;
+  }
+  
+  .scrollableContainer {
+    overflow-y: auto;
+    height: 100%;
+   // padding-top: 100px; // Adjust padding as needed
+   padding-left: 15px;
+   margin-top: 85px; /* Adjust the margin to match the border width */
+    box-sizing: border-box;
+  }
+  
 
 
 .navbar {
@@ -156,37 +168,57 @@ nav.socials{
     }
 }
 footer{
-    .logo{
-        position: absolute;
-        left: 50%;
-        bottom: 0%;
-        .must{
+    // .logo{
+    //     position: absolute;
+    //     left: 50%;
+    //     bottom: 0%;
+    //     .must{
                    
-        }
-        .image{
+    //     }
+    //     .image{
             
-            padding: 2.5px;
-            width: 60px;
-            height: 55;
-        }
-    }
+    //         padding: 2.5px;
+    //         width: 60px;
+    //         height: 55;
+    //     }
+    // }
     
-    position: fixed;
-    bottom: 0;
+    
+    padding-top: 20px;
+    margin-left: -40px;
+    display: flex;
+    justify-content: space-between;
+   // top: 5;
     width: 100%;
-    height: 60px;
-    background-color: lightgray;
-    .social{
-        border: none;
-        background: none;
-         float: inline-end;   
-        padding: 15px;
-        i{
-            &:hover{
-                color: red;
+    height: 50px;
+    background-color: transparent;
+    position: fixed;
+    nav.socials{
+        ul{
+            li{
+                //align-content: space-evenly;
+               
+                img.logo{
+                   height: 40px;
+                   width: 40px;
+                }
             }
         }
+    }
+
+    
+
+    // .social{
+    //     border: none;
+    //     background: none;
+    //      float: inline-end;   
+    //     padding: 15px;
+    //     i{
+    //         &:hover{
+    //             color: red;
+    //         }
+    //     }
         
-     }
+    //  }
 
 }
