@@ -48,7 +48,7 @@
 
             .menu {
                 width: 100%;
-                padding: 70px 0;
+                margin-right: 250px;
             }
             .menu h1 {
                 font-size: 55px;
@@ -76,8 +76,15 @@
                 width: 95%;
                 margin: 0 auto;
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-columns: auto auto auto;
                 grid-gap: 15px;
+            }
+            .menu .menu_box .subtitle {
+                font-size: 25px;
+                font-weight: 200px;
+                align-items: center;
+                justify-content: center;
+                grid-column: 2/4;
             }
             .menu .menu_box h2 {
                 display: flex;
@@ -139,7 +146,7 @@
             <h1>Our<span> Menu</span></h1>
             <div class="menu_box">
             
-                <h2>Pre-Game Appetizers</h2>
+                <div class="subtitle">Pre-Game Appetizers</div>
                 <!-- Hot Dogs -->
                 <div class="menu_card">
                     
@@ -191,7 +198,7 @@
                     </div>
                 </div>
 
-                <h2>Sides</h2>
+                <div class="subtitle">Sides</div>
 
                 <!-- Chili Cheese Fries -->
                 <div class="menu_card">
@@ -244,7 +251,7 @@
                     </div>
                 </div>
 
-                <h2>Half-Time Meals</h2>
+                <div class="subtitle">Half Time Meals</div>
                 
                 <!-- Burger -->
                 <div class="menu_card">
@@ -297,7 +304,7 @@
                     </div>
                 </div>
 
-                <h2>Victory Desserts</h2>
+                <div class="subtitle">Victory Dessert</div>
 
                 <!-- Lava cake -->
                 <div class="menu_card">
