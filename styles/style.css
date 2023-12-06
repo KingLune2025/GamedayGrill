@@ -138,16 +138,24 @@ nav.socials img {
 }
 
 footer {
-  padding-top: 20px;
-  margin-left: -40px;
-  display: flex;
-  justify-content: space-between;
+  display: inline;
   width: 100%;
   height: 50px;
   background-color: transparent;
-  position: fixed;
 }
-footer nav.socials ul li img.logo {
-  height: 40px;
-  width: 40px;
+footer img.logo {
+  position: absolute;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+}
+footer .eat {
+  padding-top: 10px;
+  padding-left: 5px;
+  float: left;
+}
+footer .soc {
+  padding-top: 10px;
+  padding-left: 5px;
+  float: right;
 }/*# sourceMappingURL=style.css.map */
