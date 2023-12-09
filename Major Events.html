@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Home</title>
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
-    <body>
-        <h1>
-            Game Days & Events
-        </h1>
-        <hr>
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="First Name...">
-        <label for="Lname">Last Name</label>
-        <input type="text" id="Lname" name="lastname" placeholder="Last Name...">
-        <label for="Major Event">Major Events</label>
-            <select id="Major Event" name="majorevents">
-                <option value="Birthday">Birthday</option>
-                <option value="Funeral">Funeral</option>
-                <option value="Wedding">Wedding</option>
-                <option value="Baby Showers">Baby Showers</option>
-                <option value="Graduation Party">Graduation Party</option>
-                <option value="Retirment Party">Retirment Party</option>
-                <option value="Corporate Event">Corporate Event</option>
-                <option value="Networking Event">Networking Event</option>
-                <option value="Family Reunions">Family Reunions</option>
-                <option value="Holiday Party">Holiday Party</option>
-                <option value="other...">Other...</option>
-            </select>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Results</title>
+</head>
+<body>
+    <form id="myForm">
+        <!-- Your form inputs go here -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <!-- Add more form inputs as needed -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            // Convert formData to URLSearchParams
+            const params = new URLSearchParams(formData);
+
+            // Redirect to the Google Apps Script URL with the form data
+            window.location.href = `https://script.google.com/macros/s/AKfycbxRCvWwSlTQV5p8lSKBXcbj0vHoqcj8mRntQ6RapjGsnuc4AfmWBHZR6VNPgNnYA98LLQ/exec`;
+        });
+    </script>
+</body>
 </html>
