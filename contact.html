@@ -19,9 +19,9 @@
             <div class="popup" onclick="myFunction()"><img class="access" src = "styles/images/Accessibility.png" width="75" height="75">
               <span class="popuptext" id="myPopup">Accessibility <hr>
                 <p class="haha">Text Size </p><br>
-                <input type="radio" id="text-off" name="text" value="off" onclick="setFontSize('medium')">
+                <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('medium')">
                 <label for="notify-off">small</label>
-                <input type="radio" id="text-on" name="text" value="on" onclick="se('x-large')">
+                <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('x-large')">
                 <label for="text-on">large</label>
               </span>
             </div>
@@ -52,22 +52,11 @@
         <script src="index.js"></script>
         <p>If you’d like to contact us for information, requests, comments or questions please email us at LHS@friscoisd.org for the quickest response.</p>
         <p>Phone Number: 555-555-5555</p>
-        
-        <h2>Popup</h2>
+     
 
 
 
 <script>
-
-if (localStorage.getItem('fontSize')) {
-  // Apply stored font size to the body element
-  document.body.style.fontSize = localStorage.getItem('fontSize');
-}
-function setFontSize(size) {
-  document.body.style.fontSize = size;
-  // Store font size preference in local storage
-  localStorage.setItem('fontSize', size);
-}
 
  function changeFont(size)
  {
@@ -90,13 +79,13 @@ function myFunction() {
       <footer>
 
       
-                  <a class="eat" href="https://www.ubereats.com/" target="_blank"><iconify-icon icon="simple-icons:ubereats" width="40" height="40"></iconify-icon> </a>
-                  <a class="eat"href="https://www.grubhub.com/" target="_blank"><iconify-icon icon="simple-icons:grubhub" width="40" height="40"></iconify-icon></a>
+                  <a class="eat" href="https://www.ubereats.com/" target="_blank"><iconify-icon icon="simple-icons:ubereats" width="30" height="30"></iconify-icon> </a>
+                  <a class="eat"href="https://www.grubhub.com/" target="_blank"><iconify-icon icon="simple-icons:grubhub" width="30" height="30"></iconify-icon></a>
                   <img class="logo" src="styles/images/logo.png">
                     
-                    <a class="soc" href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"> <iconify-icon icon="line-md:instagram"  width="40" height="40"></iconify-icon> </a>
-                    <a class="soc" href="https://www.facebook.com/LHSRedhawks/" target="_blank"> <iconify-icon icon="il:facebook" width="40" height="40"></iconify-icon>  </a>
-                    <a class="soc" href="https://twitter.com/LHSRedhawks" target="_blank"><iconify-icon icon="line-md:twitter-x" width="40" height="40"></iconify-icon>   </a>
+                    <a class="soc" href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"> <iconify-icon icon="line-md:instagram"  width="30" height="30"></iconify-icon> </a>
+                    <a class="soc" href="https://www.facebook.com/LHSRedhawks/" target="_blank"> <iconify-icon icon="il:facebook" width="30" height="30"></iconify-icon>  </a>
+                    <a class="soc" href="https://twitter.com/LHSRedhawks" target="_blank"><iconify-icon icon="line-md:twitter-x" width="30" height="30"></iconify-icon>   </a>
            
     </footer>
   </body>  

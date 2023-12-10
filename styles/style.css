@@ -152,12 +152,23 @@ footer {
   height: 50px;
   background-color: transparent;
 }
-footer img.logo {
-  position: absolute;
-  left: 40%;
-  bottom: -15%;
-  height: 60px;
-  width: 60px;
+@media (max-width: 500px) {
+  footer img.logo {
+    position: absolute;
+    left: 40%;
+    bottom: -15%;
+    height: 60px;
+    width: 60px;
+  }
+}
+@media (min-width: 500px) {
+  footer img.logo {
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    height: 60px;
+    width: 60px;
+  }
 }
 footer .eat {
   padding-top: 10px;
@@ -170,7 +181,6 @@ footer .eat :hover {
 }
 footer .soc {
   padding-top: 10px;
-  padding-left: 5px;
   float: right;
   color: white;
 }
