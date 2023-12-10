@@ -19,9 +19,9 @@
             <div class="popup" onclick="myFunction()"><img class="access" src = "styles/images/Accessibility.png" width="75" height="75">
               <span class="popuptext" id="myPopup">Accessibility <hr>
                 <p class="haha">Text Size </p><br>
-                <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('medium')" checked>
+                <input type="radio" id="text-off" name="text" value="off" onclick="setFontSize('medium')">
                 <label for="notify-off">small</label>
-                <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('x-large')">
+                <input type="radio" id="text-on" name="text" value="on" onclick="se('x-large')">
                 <label for="text-on">large</label>
               </span>
             </div>
@@ -58,6 +58,17 @@
 
 
 <script>
+
+if (localStorage.getItem('fontSize')) {
+  // Apply stored font size to the body element
+  document.body.style.fontSize = localStorage.getItem('fontSize');
+}
+function setFontSize(size) {
+  document.body.style.fontSize = size;
+  // Store font size preference in local storage
+  localStorage.setItem('fontSize', size);
+}
+
  function changeFont(size)
  {
   var root = document.documentElement;
