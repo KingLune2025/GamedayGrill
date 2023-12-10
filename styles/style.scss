@@ -1,5 +1,8 @@
 $shadow-color: rgba(0,0,0,0.2);
 
+:root{
+    --fontSize: medium;
+}
 
 
 header.top {
@@ -46,6 +49,7 @@ body, html {
 
 .navbar {
     background-color: transparent;
+    
     ul{
         display: block;
         list-style-type: none;
@@ -59,6 +63,12 @@ body, html {
         overflow: hidden;
        
     }
+    img
+            {
+                position: absolute;
+                right:100%;
+                top: 10%;
+            }
     li{
         float:left;
         padding-right: 40px;
@@ -170,7 +180,8 @@ footer{
     background-color: transparent;
         img.logo{
             position: absolute;
-            left: 50%;
+            left: 40%;
+            bottom:-15%;
            height: 60px;
            width: 60px;
         }
@@ -178,12 +189,27 @@ footer{
             padding-top: 10px;
             padding-left: 5px;
             float: left;
-            
+            color:white;
+                    :hover{
+                        color:red;
+                    }
         }
+        
         .soc{
             padding-top: 10px;
             padding-left: 5px;
-                    float: right;
+            float: right;
+            color:white;
+                    :hover{
+                        color:red;
+                    }
                 }
     }
+    p{
+        font-size:var(--fontSize);
+        padding: 0;
+    }
     
+.options{
+    display: inline;
+}
