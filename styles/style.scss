@@ -210,6 +210,55 @@ footer{
         padding: 0;
     }
     
-.options{
-    display: inline;
-}
+.popup {
+    position: relative;
+   
+    cursor: pointer;
+    -webkit-user-select: none;
+    
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    -moz-user-select: none;
+  }
+  
+  .popup .popuptext {
+    visibility: hidden;
+    
+    background-color: black;
+
+    z-index: 1;
+    color:white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    width: 160px;
+   
+    bottom: -150%;
+    left: 250%;
+    margin-left: -80px;
+    position: absolute;
+  }
+  
+  .popup .popuptext::after {
+    content: "";
+   
+    top: 100%;
+    position: absolute;
+    left: 50%;
+    
+    border-width: 5px;
+    border-style: solid;
+
+    margin-left: -5px;
+  }
+  
+  .popup .show {
+    visibility: visible;
+  }
+
+  .haha{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+  }
