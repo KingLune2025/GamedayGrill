@@ -10,86 +10,95 @@
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
         <style>
-            body {
+            *{
+                padding: 0;
                 margin: 0;
-                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
             }
-            .scrollableContainer .menu {
-                margin-top: 140px;
-                width: 100%;
-                margin-right: 220px;
-            }
-            .scrollableContainer .menu h1 {
-                font-size: 55px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 20px;
-                margin-bottom: 30px;
-                margin-top: -120px;
-            }
-            .scrollableContainer .menu h1 span {
-                color: darkgoldenrod;
-                margin-left: 15px;
-            }
-            .scrollableContainer .menu h1 span::after {
-                content: "";
-                width: 100%;
-                height: 2px;
-                background: darkgoldenrod;
-                display: block;
-                position: relative;
-                bottom: 9px;
-            }
-            .scrollableContainer .menu .menu_box {
-                width: 95%;
-                margin: 0 auto;
+            .menu{
+                padding: 0 10px 30px 10px;
                 display: grid;
-                grid-template-columns: auto auto auto;
-                grid-gap: 15px;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                grid-gap: 20px 40px;
+                grid-template-areas: 
+                    ""
+                ;
             }
-            .scrollableContainer .menu .menu_box .subtitle {
+            /* @media (max-width: 1023px) {
+                .menu {
+                    grid-template-columns: 100%;
+                    grid-template-rows: repeat(6, fit-content(300px));
+                    grid-template-areas:	;
+                }
+            }  */
+            .heading{
+                margin-bottom: 30px;
+                padding: 30px 0;
+                grid-column: 1/-1;
+                text-align: center;
+            }
+            .heading>h1{
+                font-weight: 400;
+                font-size: 30px;
+                letter-spacing: 10px;
+                margin-bottom: 10px;
+            }
+            .heading>h3{
+                font-weight: 600;
+                font-size: 42px;
+                letter-spacing: 5px;
+            }
+            .heading>h3 span {
+                color: darkgoldenrod;
+            }
+            .food-items{
+                display: grid;
+                position: relative;
+                grid-template-rows: auto 1fr;
+                border-radius: 15px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+            }
+            .food-items img{
+                position: relative;
+                width: 100%;
+                border-radius: 15px 15px 0 0;
+            }
+            h1{
+                grid-column: 1/-1;
+                text-align: center;
+            }
+            .details{
+                padding: 20px  10px;
+                display: grid;
+                grid-template-rows: auto 1fr 50px;
+                grid-row-gap: 15px;
+            }
+            .details-sub{
+                display: grid;
+                grid-template-columns: auto auto;
+            }
+            .details-sub>h5{
+                font-weight: 600;
+                font-size: 18px;
+            }
+            .price{
+                text-align: right;
+            }
+            .details>p{
+                font-size: 15px;
+                line-height: 28px;
+                font-weight: 400;
+                align-self: stretch;
+            }
+            .subtitle{
+                /* Need to center this without fucking up adaptive window sizing */
                 font-size: 25px;
                 font-weight: 200px;
-                align-items: center;
-                justify-content: center;
-                grid-column: 2/4;
-                margin-left: 60px;
+                margin: 60px;
                 padding: 15px;
-            }
-            .scrollableContainer .menu .menu_box h2 {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .scrollableContainer .menu .menu_box .menu_card {
-                width: 325px;
-                height: 440px;
-                padding-top: 10px;
-                margin-bottom: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                border-radius: 15px;
-            }
-            .scrollableContainer .menu .menu_box .menu_card .menu_info {
-                margin: 0 auto;
-                overflow: hidden;
-                text-align: center;
-                margin-top: 8px;
-                line-height: 21px;
-            }
-            .scrollableContainer .menu .menu_box .menu_card .menu_image {
-                width: 300px;
-                height: 245px;
-                margin: 0 auto;
-                overflow: hidden;
-            }
-            .scrollableContainer .menu .menu_box .menu_card .menu_image img {
-                width: 100%;
-                height: 100%;
-                border-radius: 15px;
-                object-fit: cover;
-                object-position: center;
-            }
+            }      
+            
         </style>
 
     </head>
@@ -107,223 +116,185 @@
                 </nav>
             </header>
         <div class="scrollableContainer"> 
-            <!-- Menu -->
-            <div class="menu" id="Menu">
-                <h1>Our<span> Menu</span></h1>
-                <div class="menu_box">
-                
-                    <div class="subtitle">Pre-Game Appetizers</div>
-                    <!-- Hot Dogs -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/hot-dog.png">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Texan Twister Dog</h2>
-                            <p>
-                                A fiery fusion of smoked sausage, jalapeños, and spicy chili, delivering a taste tornado in every bite.
-                            </p>
-                            <h3>$11.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Nirvana Nachos -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/nachos.jpeg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Nirvana Nachos</h2>
-                            <p>
-                                Crispy tortilla chips enhanced with queso, jalapeños, and your choice of protein.
-                            </p>
-                            <h3>$11.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Fajitas -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/fajitas.jpeg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Mummy's Fajitas</h2>
-                            <p>
-                                Unleash the sizzle with our mouthwatering  fajitas, bursting with grilled goodness and vibrant Tex-Mex flavors. Offered in veg or chicken varieties. Rawr!
-                            </p>
-                            <h3>$13.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <div class="subtitle">Sides</div>
-
-                    <!-- Chili Cheese Fries -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/chili-cheese-fries.jpg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Smokin' Chili Cheese Fries</h2>
-                            <p>
-                                Crispy fries smothered in savory chili and melted cheddar cheese for a taste explosion!
-                            </p>
-                            <h3>$11.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Golden Fries -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/fries.jpeg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Golden Fries</h2>
-                            <p>
-                                Classic french fries served with a side of tangy ketchup.
-                            </p>
-                            <h3>$7.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Wings -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/wings.png">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Zesty Wings</h2>
-                            <p>
-                                Dive into flavor with our 8 Piece Zesty Wings, where succulent buffalo wings meet a symphony of bold and tangy spices. Offered in boneless or bone varieties. Mmm, zesty!
-                            </p>
-                            <h3>$13.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <div class="subtitle">Half Time Meals</div>
-                    
-                    <!-- Burger -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/burger.jpg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>The 6-Pointer</h2>
-                            <p>
-                                Angus beef perfection crowned with melted American cheese, lettuce, tomato, and onion.
-                            </p>
-                            <h3>$19.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Ribs -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/ribs.jpeg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Texas Rib Rack</h2>
-                            <p>
-                                Succulent ribs slow-cooked to perfection, dancing with a signature smoky Texas flavor.
-                            </p>
-                            <h3>$18.99</h3>
-                            
-                        </div>
-                    </div>
-                
-                    <!-- Pulled Pork Sandwich -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/pp-sandwich.jpeg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>The ACL Explosion</h2>
-                            <p>
-                                Wham! Treat yourself to some slow-smoked pulled pork perfection, piled high and dripping with tangy barbecue bliss on a toasted bun.
-                            </p>
-                            <h3>$19.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <div class="subtitle">Victory Dessert</div>
-
-                    <!-- Lava cake -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/lava-cake.jpeg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Molten Volcano Cake</h2>
-                            <p>
-                                A decadent eruption of warm, gooey chocolate bliss concealed within a perfectly baked lava cake.
-                            </p>
-                            <h3>$7.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Ice Cream -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/ice-cream.png">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Ice Cream</h2>
-                            <p>
-                                Indulge in creamy bliss with our decadent ice cream, a delightful treat for your taste buds. Offered in Vanilla, Strawberry, and Chocolate flavors.
-                            </p>
-                            <h3>$3.99</h3>
-                            
-                        </div>
-                    </div>
-
-                    <!-- Peach Cobbler -->
-                    <div class="menu_card">
-                        
-                        <div class="menu_image">
-                            <img src="styles/images/menu_items/peach-cobbler.jpeg">
-                        </div>
-
-                        <div class="menu_info">
-                            <h2>Peach Cobbler</h2>
-                            <p>
-                                Juicy peaches nestled beneath a golden-brown crust, served warm and topped with a scoop of vanilla ice cream.
-                            </p>
-                            <h3>$5.99</h3>
-                            
-                        </div>
-                    </div>
-
+            <div class="menu">
+                <div class="heading">
+                    <h3>&mdash; OUR<span> MENU</span> &mdash; </h3>
                 </div>
+
+                <!-- <div class="subtitle">Pre-Game Appetizers</div> -->
+                
+                <!-- Hot Dog -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/hot-dog.png">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Texan Twister Dog</h5>
+                            <h5 class="price"> $11.99 </h5>
+                        </div>
+                        <p> A fiery fusion of smoked sausage, jalapeños, and spicy chili, delivering a taste tornado in every bite.</p>
+                    </div>
+                </div>
+
+                <!-- Nachos -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/nachos.jpeg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>Nirvana Nachos</h5>
+                            <h5 class="price"> $11.99 </h5>
+                        </div>
+                        <p>
+                            Crispy tortilla chips enhanced with queso, jalapeños, and your choice of protein.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Fajitas -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/fajitas.jpeg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Mummy's Fajitas </h5>
+                            <h5 class="price"> $13.99 </h5>
+                        </div>
+                        <p> 
+                            Unleash the sizzle with our mouthwatering fajitas, bursting with grilled goodness and vibrant Tex-Mex flavors. 
+                            Offered in veg or chicken varieties. Rawr!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div class="subtitle">Sides</div> -->
+
+                <!-- CC Fries -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/chili-cheese-fries.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Smokin' Chili Cheese Fries </h5>
+                            <h5 class="price"> $11.99 </h5>
+                        </div>
+                        <p> 
+                            Crispy fries smothered in savory chili and melted cheddar cheese for a taste explosion!
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- fries -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/fries.jpeg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Golden Fries </h5>
+                            <h5 class="price"> $7.99 </h5>
+                        </div>
+                        <p> 
+                            Classic french fries served with a side of tangy ketchup.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Wings -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/wings.png">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Zesty Wings </h5>
+                            <h5 class="price"> $13.99 </h5>
+                        </div>
+                        <p> 
+                            Dive into flavor with our 8 Piece Zesty Wings, where succulent buffalo wings meet a symphony of bold and tangy spices. 
+                            Offered in boneless or bone varieties. Mmm, zesty!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div class="subtitle">Half Time Meals</div> -->
+
+                <!-- ribs -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/ribs.jpeg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Texas Rib Rack </h5>
+                            <h5 class="price"> $18.99 </h5>
+                        </div>
+                        <p> 
+                            Succulent ribs slow-cooked to perfection, dancing with a signature smoky Texas flavor.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Burger -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/burger.jpg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5>The 6 Pointer</h5>
+                            <h5 class="price"> $19.99 </h5>
+                        </div>
+                        <p> Angus beef perfection crowned with melted American cheese, lettuce, tomato, and onion.</p>
+                    </div>
+                </div>
+
+                <!-- PP sandwich -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/pp-sandwich.jpeg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> The ACL Explosion </h5>
+                            <h5 class="price"> $19.99 </h5>
+                        </div>
+                        <p> 
+                            Wham! Treat yourself to some slow-smoked pulled pork perfection, piled high and dripping with tangy barbecue bliss on a toasted bun.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div class="subtitle">Victory Desserts</div> -->
+
+                <!-- lava cake -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/lava-cake.jpeg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Molten Volcano Cake </h5>
+                            <h5 class="price"> $7.99 </h5>
+                        </div>
+                        <p> 
+                            A decadent eruption of warm, gooey chocolate bliss concealed within a perfectly baked lava cake.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ice cream -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/ice-cream.png">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Ice Cream </h5>
+                            <h5 class="price"> $3.99 </h5>
+                        </div>
+                        <p> 
+                            Indulge in creamy bliss with our decadent ice cream, a delightful treat for your taste buds. Offered in Vanilla, Strawberry, and Chocolate flavors.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- cobbler -->
+                <div class="food-items">
+                    <img src="styles/images/menu_items/peach-cobbler.jpeg">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5> Peach Cobbler </h5>
+                            <h5 class="price"> $5.99 </h5>
+                        </div>
+                        <p> 
+                            Juicy peaches nestled beneath a golden-brown crust, served warm and topped with a scoop of vanilla ice cream.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
         <footer>
