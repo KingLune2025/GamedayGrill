@@ -21,7 +21,7 @@ body, html {
 
 .megaContainer {
   /* Fix the border in place */
-  border: 100px solid transparent;
+  border: 90px solid transparent;
   -o-border-image: url(images/border.png) 10% stretch;
      border-image: url(images/border.png) 10% stretch;
   height: 100%;
