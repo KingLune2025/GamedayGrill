@@ -53,9 +53,17 @@ body.border1{
    // z-index: -1;
 }
 
+.static{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    opacity: 45%;
+}
 p.homePageHeader{
     font-weight: 600;
-    font-size: 150px;
+    font-size: 120px;
     border-color: white;
 }
 

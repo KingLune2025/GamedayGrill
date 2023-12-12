@@ -3,6 +3,8 @@
 }
 
 header.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: left;
   margin: -90px;
@@ -41,9 +43,18 @@ body.border1 {
   opacity: 70%;
 }
 
+.static {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  opacity: 45%;
+}
+
 p.homePageHeader {
   font-weight: 600;
-  font-size: 150px;
+  font-size: 120px;
   border-color: white;
 }
 
