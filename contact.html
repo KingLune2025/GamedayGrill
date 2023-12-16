@@ -28,7 +28,7 @@
             <div class="popup" onclick="myFunction()"><img class="access" src = "styles/images/Accessibility.png"  width="50" height="50">
               <span class="popuptext" id="myPopup">Accessibility <hr>
                 <p class="haha">Text Size </p><br>
-                <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('x-large')">
+                <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('large')">
                 <label for="text-off">small</label>
                 <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('xx-large')">
                 <label for="text-on">large</label>
@@ -96,10 +96,10 @@
       function startFont()
       {
         if (document.cookie == "") {
-          document.cookie = "fontSize=x-large;path=/;";
+          document.cookie = "fontSize=large;path=/;";
           console.log(document.cookie);
         var root = document.documentElement;
-        root.style.setProperty('--fontSize', 'x-large');
+        root.style.setProperty('--fontSize', 'large');
      }
         else
         {
