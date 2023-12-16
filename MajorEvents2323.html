@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.burger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+}
+
+.burger-icon {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.options {
+  display: none;
+  flex-direction: column;
+}
+
+.calendar,
+.other-option {
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  display: none;
+}
+
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Burger Menu with Calendar</title>
+</head>
+<body>
+
+  <div class="burger-menu">
+    <div class="burger-icon" id="burger-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="options" id="options">
+      <div class="calendar" id="calendar">
+        <!-- Calendar content goes here -->
+        <input type="date" id="calendar-input">
+      </div>
+      <div class="other-option" id="other-option">
+        <!-- Other option content goes here -->
+        <p>Other Option Content</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const burgerIcon = document.getElementById('burger-icon');
+  const options = document.getElementById('options');
+  const calendarOption = document.getElementById('calendar');
+  const otherOption = document.getElementById('other-option');
+
+  burgerIcon.addEventListener('click', function () {
+    options.style.display = options.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  calendarOption.style.display = 'block'; // Show calendar by default
+
+  calendarOption.addEventListener('click', function () {
+    calendarOption.style.display = 'none';
+    otherOption.style.display = 'block';
+  });
+
+  otherOption.addEventListener('click', function () {
+    calendarOption.style.display = 'block';
+    otherOption.style.display = 'none';
+  });
+});
+
+  </script>
+</body>
+</html>
