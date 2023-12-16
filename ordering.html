@@ -20,42 +20,38 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
                 grid-gap: 20px 40px;
-                grid-template-areas: 
-                    ""
-                ;
+                
             }
-            /* @media (max-width: 1023px) {
-                .menu {
-                    grid-template-columns: 100%;
-                    grid-template-rows: repeat(6, fit-content(300px));
-                    grid-template-areas:	;
-                }
-            }  */
             .heading{
                 margin-bottom: 30px;
                 padding: 30px 0;
                 grid-column: 1/-1;
                 text-align: center;
             }
-            .heading>h1{
-                font-weight: 400;
-                font-size: 30px;
-                letter-spacing: 10px;
-                margin-bottom: 10px;
-            }
             .heading>h3{
                 font-weight: 600;
                 font-size: 42px;
                 letter-spacing: 5px;
+                color: white;
             }
             .heading>h3 span {
                 color: darkgoldenrod;
             }
+            
+            .subtitle{
+                grid-column:2/-2;
+                font-size: 25px;
+                font-weight: 200px;
+                padding-bottom: 30px;
+                color: white;
+            }     
             .food-items{
                 display: grid;
                 position: relative;
+                justify-content: flex-start;
                 grid-template-rows: auto 1fr;
                 border-radius: 15px;
+                background-color: white;
                 box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 
             }
@@ -64,10 +60,11 @@
                 width: 100%;
                 border-radius: 15px 15px 0 0;
             }
-            h1{
-                grid-column: 1/-1;
-                text-align: center;
-            }
+            @media (max-width: 600px) {
+                .food-items {
+                    grid-template-columns: 1fr;
+                }
+            } 
             .details{
                 padding: 20px  10px;
                 display: grid;
@@ -91,19 +88,12 @@
                 font-weight: 400;
                 align-self: stretch;
             }
-            .subtitle{
-                /* Need to center this without fucking up adaptive window sizing */
-                font-size: 25px;
-                font-weight: 200px;
-                margin: 60px;
-                padding: 15px;
-            }      
             
         </style>
 
     </head>
     <body class="border1">
-        <div class="video-container" style="background-color:white;">
+        <div class="video-container" style="background-color:grey;">
             
             <video autoplay muted loop id="myVideo" class="static">
                 <source src="styles/videos/black_texture.mp4" type="video/mp4">
@@ -150,10 +140,10 @@
         <div class="scrollableContainer"> 
             <div class="menu">
                 <div class="heading">
-                    <h3>&mdash; OUR<span> MENU</span> &mdash; </h3>
+                    <h3>&mdash;<span> OUR MENU</span> &mdash; </h3>
                 </div>
 
-                <!-- <div class="subtitle">Pre-Game Appetizers</div> -->
+                <div class="subtitle">Pre-Game Appetizers</div>
                 
                 <!-- Hot Dog -->
                 <div class="food-items">
@@ -183,7 +173,7 @@
                 
                 <!-- Fajitas -->
                 <div class="food-items">
-                    <img src="styles/images/menu_items/fajitas.jpeg">
+                    <img src="styles/images/menu_items/fajitas.jpg">
                     <div class="details">
                         <div class="details-sub">
                             <h5> Mummy's Fajitas </h5>
@@ -196,7 +186,7 @@
                     </div>
                 </div>
 
-                <!-- <div class="subtitle">Sides</div> -->
+                <div class="subtitle">Sides</div>
 
                 <!-- CC Fries -->
                 <div class="food-items">
@@ -241,11 +231,11 @@
                     </div>
                 </div>
 
-                <!-- <div class="subtitle">Half Time Meals</div> -->
+                <div class="subtitle">Half Time Meals</div>
 
                 <!-- ribs -->
                 <div class="food-items">
-                    <img src="styles/images/menu_items/ribs.jpeg">
+                    <img src="styles/images/menu_items/ribs.jpg">
                     <div class="details">
                         <div class="details-sub">
                             <h5> Texas Rib Rack </h5>
@@ -283,11 +273,11 @@
                     </div>
                 </div>
 
-                <!-- <div class="subtitle">Victory Desserts</div> -->
+                <div class="subtitle">Victory Desserts</div>
 
                 <!-- lava cake -->
                 <div class="food-items">
-                    <img src="styles/images/menu_items/lava-cake.jpeg">
+                    <img src="styles/images/menu_items/lava-cake.jpg">
                     <div class="details">
                         <div class="details-sub">
                             <h5> Molten Volcano Cake </h5>
@@ -315,7 +305,7 @@
 
                 <!-- cobbler -->
                 <div class="food-items">
-                    <img src="styles/images/menu_items/peach-cobbler.jpeg">
+                    <img src="styles/images/menu_items/peach-cobbler.jpg">
                     <div class="details">
                         <div class="details-sub">
                             <h5> Peach Cobbler </h5>
