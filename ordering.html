@@ -87,7 +87,7 @@
         </style>
 
     </head>
-    <body class="border1">
+    <body onload="startFont()" class="border1">
         <div class="video-container" style="background-color:grey;">
             
             <video autoplay muted loop id="myVideo" class="static">
@@ -109,24 +109,25 @@
                     </span>
                   </div>
                   <script>
-                    function startFont()
-                    {
-                        if (document.cookie == "") {
-                            document.cookie = "fontSize=large;path=/;";
-                            console.log(document.cookie);
-                            var root = document.documentElement;
-                            root.style.setProperty('--fontSize', 'large');
-                        }
-                        else
-                        {
-                            var root = document.documentElement;
-                            root.style.setProperty('--fontSize', 'xx-large');
-                        }
-                    }
+                     function startFont()
+      {
+        if (document.cookie == "") {
+          document.cookie = "fontSize=large;path=/;";
+        var root = document.documentElement;
+        root.style.setProperty('--fontSize', 'large');
+     }
+        else
+        {
+        var root = document.documentElement;
+        root.style.setProperty('--fontSize', getCookie('fontSize'));
+      }
+    }
+
                     function changeFont(size)
                     {
-                     var root = document.documentElement;
-                       root.style.setProperty('--fontSize', size);
+                        document.cookie = "fontSize="+size+";path=/";
+                        var root = document.documentElement;
+                        root.style.setProperty('--fontSize', size);
                     }
                    // When the user clicks on div, open the popup
                    function myFunction() {
@@ -134,6 +135,16 @@
                      
                        popup.classList.toggle("show");
                    }
+                   function getCookie(name) {
+      const cDecoded = decodeURIComponent(document.cookie);
+      const cArray = cDecoded.split("; ");
+      cArray.forEach(element => {
+        if(element.indexOf(name) == 0) {
+          result = element.substring(name.length+1)
+        }
+      })
+      return result;
+    }
                    </script>
                    
                 <nav class="navbar">

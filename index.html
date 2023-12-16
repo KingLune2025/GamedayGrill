@@ -11,7 +11,7 @@
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
     </head>
-    <body class="border1">
+    <body onload="startFont()" class="border1">
         <div class="video-container" style="background-color:darkkhaki;">
             
             <video autoplay muted loop id="myVideo" class="videoPlayer">
@@ -24,29 +24,16 @@
              
             <header class="top">
 
-                <div class="popup" onclick="myFunction()"><img class="access" src = "styles/images/Accessibility.png" width="75" height="75">
+                <div class="popup" onclick="myFunction()"><img class="access" src = "styles/images/Accessibility.png" width="50" height="50">
                     <span class="popuptext" id="myPopup">Accessibility <hr>
                       <p class="haha">Text Size </p><br>
-                      <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('medium')" >
+                      <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('large')" >
                       <label for="notify-off">small</label>
-                      <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('x-large')">
+                      <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('xx-large')">
                       <label for="text-on">large</label>
                     </span>
                   </div>
-                  <script>
-                    function changeFont(size)
-                    {
-                     var root = document.documentElement;
-                       root.style.setProperty('--fontSize', size);
-                    }
-                   // When the user clicks on div, open the popup
-                   function myFunction() {
-                     var popup = document.getElementById("myPopup");
-                     
-                       popup.classList.toggle("show");
-                   }
-                   </script>
-                   
+                  
                 <nav class="navbar">
                     <ul>
                         <li><a href="index.html" class="active"><p>Home</p></a></li>
@@ -97,10 +84,45 @@
             </nav>
         </footer>
         </div>
-
-
-        <script src="index.js"></script>
-
+        <script>
+                    
+            function startFont()
+{
+if (document.cookie == "") {
+  document.cookie = "fontSize=large;path=/;";
+var root = document.documentElement;
+root.style.setProperty('--fontSize', 'large');
+}
+else
+{
+var root = document.documentElement;
+root.style.setProperty('--fontSize', getCookie('fontSize'));
+}
+}
+function getCookie(name) {
+const cDecoded = decodeURIComponent(document.cookie);
+const cArray = cDecoded.split("; ");
+cArray.forEach(element => {
+if(element.indexOf(name) == 0) {
+  result = element.substring(name.length+1)
+}
+})
+return result;
+}
+            function changeFont(size)
+            {
+                document.cookie = "fontSize="+size+";path=/";
+                var root = document.documentElement;
+                root.style.setProperty('--fontSize', size);
+            }
+           // When the user clicks on div, open the popup
+           function myFunction() {
+             var popup = document.getElementById("myPopup");
+             
+               popup.classList.toggle("show");
+           }
+           </script>
+          
     </body>
     
 </html>
