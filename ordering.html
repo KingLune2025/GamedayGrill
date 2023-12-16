@@ -37,10 +37,10 @@
             .heading>h3 span {
                 color: darkgoldenrod;
             }
-            
             .subtitle{
-                grid-column:2/-2;
-                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                font-size: 35px;
                 font-weight: 200px;
                 padding-bottom: 30px;
                 color: white;
@@ -60,11 +60,6 @@
                 width: 100%;
                 border-radius: 15px 15px 0 0;
             }
-            @media (max-width: 600px) {
-                .food-items {
-                    grid-template-columns: 1fr;
-                }
-            } 
             .details{
                 padding: 20px  10px;
                 display: grid;
@@ -138,13 +133,15 @@
                 </nav>
             </header>
         <div class="scrollableContainer"> 
-            <div class="menu">
-                <div class="heading">
-                    <h3>&mdash;<span> OUR MENU</span> &mdash; </h3>
-                </div>
 
-                <div class="subtitle">Pre-Game Appetizers</div>
-                
+            <div class="heading">
+                <h3>&mdash;<span> OUR MENU</span> &mdash; </h3>
+            </div>
+
+            <div class="subtitle">Pre-Game Appetizers</div>
+
+            <div class="menu">
+
                 <!-- Hot Dog -->
                 <div class="food-items">
                     <img src="styles/images/menu_items/hot-dog.png">
@@ -185,8 +182,10 @@
                         </p>
                     </div>
                 </div>
+            </div> 
 
-                <div class="subtitle">Sides</div>
+            <div class="subtitle">Sides</div>
+            <div class="menu">
 
                 <!-- CC Fries -->
                 <div class="food-items">
@@ -230,8 +229,11 @@
                         </p>
                     </div>
                 </div>
+            </div> 
 
-                <div class="subtitle">Half Time Meals</div>
+            <div class="subtitle">Half Time Meals</div>
+
+            <div class="menu">
 
                 <!-- ribs -->
                 <div class="food-items">
@@ -272,8 +274,10 @@
                         </p>
                     </div>
                 </div>
+            </div>
 
-                <div class="subtitle">Victory Desserts</div>
+            <div class="subtitle">Victory Desserts</div>
+            <div class="menu">
 
                 <!-- lava cake -->
                 <div class="food-items">
@@ -316,9 +320,10 @@
                         </p>
                     </div>
                 </div>
-
             </div>
+
         </div>
+
         <footer>
             <nav class="socials"> 
                 <ul>
