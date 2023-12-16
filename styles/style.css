@@ -1,3 +1,7 @@
+:root {
+  --fontSize:large;
+}
+
 header.top {
   display: flex;
   justify-content: left;
@@ -5,14 +9,79 @@ header.top {
   padding-top: 15px;
 }
 
-body, html {
+html {
   scroll-behavior: smooth;
   height: 100%;
   margin: 0;
 }
 
+body.border1 {
+  height: auto;
+  width: 100%;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.videoPlayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  opacity: 70%;
+}
+
+.static {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  opacity: 45%;
+}
+
+.homePageHeader {
+  font-weight: 600;
+  font-size: 120px;
+  border-color: white;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .videoPlayer {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .videoPlayer {
+    width: auto;
+    height: 100%;
+  }
+}
+.colA {
+  float: left;
+  width: 50%; /* Each column takes 50% of the width */
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.homeImg {
+  max-width: 90%;
+}
+
 * {
-  font-family: sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .megaContainer {
@@ -24,6 +93,7 @@ body, html {
   width: auto;
   box-sizing: border-box;
   position: fixed;
+  z-index: 10;
 }
 
 .scrollableContainer {
@@ -32,6 +102,7 @@ body, html {
   padding-left: 15px;
   margin-top: 85px; /* Adjust the margin to match the border width */
   box-sizing: border-box;
+  z-index: 99;
 }
 
 .navbar {
@@ -48,6 +119,11 @@ body, html {
   padding-left: 80px;
   margin: 0px;
   overflow: hidden;
+}
+.navbar img {
+  position: absolute;
+  right: 100%;
+  top: 10%;
 }
 .navbar li {
   float: left;
@@ -143,19 +219,86 @@ footer {
   height: 50px;
   background-color: transparent;
 }
-footer img.logo {
-  position: absolute;
-  left: 50%;
-  height: 60px;
-  width: 60px;
+@media (max-width: 500px) {
+  footer img.logo {
+    position: absolute;
+    left: 37%;
+    bottom: -15%;
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (min-width: 500px) {
+  footer img.logo {
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    height: 60px;
+    width: 60px;
+  }
 }
 footer .eat {
   padding-top: 10px;
   padding-left: 5px;
   float: left;
+  color: white;
+}
+footer .eat :hover {
+  color: red;
 }
 footer .soc {
   padding-top: 10px;
-  padding-left: 5px;
   float: right;
+  color: white;
+}
+footer .soc :hover {
+  color: red;
+}
+
+p {
+  font-size: var(--fontSize);
+}
+
+.popup {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-block;
+  -moz-user-select: none;
+}
+
+.popup .popuptext {
+  visibility: hidden;
+  background-color: black;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  width: 160px;
+  bottom: -150%;
+  left: 250%;
+  margin-left: -80px;
+  position: absolute;
+}
+
+.popup .popuptext::after {
+  content: "";
+  top: 100%;
+  position: absolute;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  margin-left: -5px;
+}
+
+.popup .show {
+  visibility: visible;
+}
+
+.haha {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
 }/*# sourceMappingURL=style.css.map */
