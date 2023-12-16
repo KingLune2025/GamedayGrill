@@ -96,9 +96,10 @@
       function startFont()
       {
         if (document.cookie == "") {
-          document.cookie = "fontSize=large;path=/;";
+          document.cookie = "fontSize=x-large;path=/;";
+          console.log(document.cookie);
         var root = document.documentElement;
-        root.style.setProperty('--fontSize', 'large');
+        root.style.setProperty('--fontSize', 'x-large');
      }
         else
         {

@@ -83,7 +83,28 @@
                 font-weight: 400;
                 align-self: stretch;
             }
-            
+
+            /* Floating Back-To-Top Button */
+            #myBtn {
+                position: fixed;
+                top: 80%;
+                float: right;
+                right: 18.5%;
+                left: 87.25%;
+                max-width: 50px;
+                width: 100%;
+                font-size: 12px;
+                border-color: rgba(85, 85, 85, 0.2);
+                background-color: rgb(100,100,100);
+                padding: .5px;
+                border-radius: 4px;
+            }
+
+            /*On Hover Color Change*/
+            #myBtn:hover {
+                background-color: #7dbbf1;
+            }
+ 
             
         </style>
 
@@ -159,6 +180,8 @@
                 </nav>
             </header>
         <div class="scrollableContainer"> 
+            
+            <a id="scrolltop"></a>
 
             <div class="heading">
                 <h3>&mdash;<span> OUR MENU</span> &mdash; </h3>
@@ -256,7 +279,7 @@
                     </div>
                 </div>
             </div> 
-
+            
             <div class="subtitle">Half Time Meals</div>
 
             <div class="menu">
@@ -348,8 +371,13 @@
                 </div>
             </div>
 
-        </div>
+            <!-- Scroll to top -->
+            <button id="myBtn"><a href="#scrolltop" style="color: white"><iconify-icon icon="ion:arrow-up-circle" width="40" height="40"></iconify-icon>
 
+            </a></button>
+        
+        </div>
+        
         <footer>
             <nav class="socials"> 
                 <ul>
