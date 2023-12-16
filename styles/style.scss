@@ -1,7 +1,7 @@
 $shadow-color: rgba(0,0,0,0.2);
 
 :root{
-    --fontSize:medium;
+    --fontSize:large;
 }
 
 
@@ -61,7 +61,7 @@ body.border1{
     width: auto;
     opacity: 45%;
 }
-p.homePageHeader{
+.homePageHeader{
     font-weight: 600;
     font-size: 120px;
     border-color: white;
@@ -256,10 +256,10 @@ nav.socials{
         }   
     }
     
+    
 }
 
-.majorevents
-{
+.majorevents{
     text-align: center;
     .calendar 
     {
@@ -320,11 +320,11 @@ footer{
                         color:red;
                     }
                 }
-    }
-    p{
-        font-size:var(--fontSize);
-        padding: 0;
-    }
+}
+p{
+    font-size:var(--fontSize);
+}
+
     
 .popup {
     position: relative;

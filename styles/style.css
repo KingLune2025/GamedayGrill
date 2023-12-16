@@ -1,10 +1,8 @@
 :root {
-  --fontSize:medium;
+  --fontSize:large;
 }
 
 header.top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: left;
   margin: -90px;
@@ -52,7 +50,7 @@ body.border1 {
   opacity: 45%;
 }
 
-p.homePageHeader {
+.homePageHeader {
   font-weight: 600;
   font-size: 120px;
   border-color: white;
@@ -259,7 +257,6 @@ footer .soc :hover {
 
 p {
   font-size: var(--fontSize);
-  padding: 0;
 }
 
 .popup {
