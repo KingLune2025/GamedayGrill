@@ -1,116 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    .burger-menu {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #333;
-      padding: 10px;
-    }
-
-    .burger-icon {
-      cursor: pointer;
-      color: white;
-      font-size: 20px;
-    }
-
-    .bar {
-      height: 3px;
-      width: 25px;
-      background-color: white;
-      margin: 6px 0;
-      transition: 0.4s;
-    }
-
-    .options {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      background-color: #333;
-      width: 100%;
-    }
-
-    .options a {
-      color: white;
-      padding: 12px;
-      text-decoration: none;
-      display: block;
-      text-align: center;
-    }
-
-    .options a:hover {
-      background-color: #555;
-    }
-
-    .calendar,
-    .other-option {
-      padding: 10px;
-      background-color: #444;
-      color: white;
-      display: none;
-    }
-  </style>
-  <title>Burger Menu with Calendar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Switch</title>
 </head>
-
 <body>
 
-  <div class="burger-menu">
-    <div class="burger-icon" id="burger-icon">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <div class="options" id="options">
-      <a href="#" id="calendar-option">NFL</a>
-      <a href="#" id="other-option">MLB</a>
-    </div>
-  </div>
-
-  <div class="calendar" id="calendar">
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23F4511E&ctz=America%2FChicago&showTitle=0&showCalendars=1&showTz=0&showTabs=0&showPrint=0&showNav=1&src=bmZsXzZfJTQ0YWxsYXMrJTQzb3dib3lzI3Nwb3J0c0Bncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bmZsXzM0XyU0OG91c3RvbislNTRleGFucyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33&color=%23A79B8E" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  </div>
-
-  <div class="other-option" id="other-option-content">
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showTz=0&src=bWxiXzE4XyU0OG91c3RvbislNDFzdHJvcyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=bWxiXzEzXyU1NGV4YXMrJTUyYW5nZXJzI3Nwb3J0c0Bncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285F4&color=%23F09300" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const burgerIcon = document.getElementById('burger-icon');
-      const options = document.getElementById('options');
-      const calendarOption = document.getElementById('calendar-option');
-      const otherOption = document.getElementById('other-option');
-      const calendarContent = document.getElementById('calendar');
-      const otherOptionContent = document.getElementById('other-option-content');
-
-      burgerIcon.addEventListener('click', function () {
-        options.style.display = options.style.display === 'block' ? 'none' : 'block';
-      });
-
-      calendarOption.addEventListener('click', function () {
-        calendarContent.style.display = 'block';
-        otherOptionContent.style.display = 'none';
-        options.style.display = 'none';
-      });
-
-      otherOption.addEventListener('click', function () {
-        calendarContent.style.display = 'none';
-        otherOptionContent.style.display = 'block';
-        options.style.display = 'none';
-      });
-    });
-  </script>
+<label for="calendarSelector">Select Sport:</label>
+<select id="calendarSelector" onchange="changeCalendar()">
+    <option value="NFL" selected>NFL</option>
+    <option value="MLB">MLB</option>
+    <option value="NHL">NHL</option>
+</select>
 </body>
+<div id="calendarContainer">
+    <iframe id="NFL" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23F4511E&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=bmZsXzZfJTQ0YWxsYXMrJTQzb3dib3lzI3Nwb3J0c0Bncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bmZsXzM0XyU0OG91c3RvbislNTRleGFucyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33&color=%23A79B8E" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
+    <iframe id="MLB" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23C0CA33&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=bWxiXzE4XyU0OG91c3RvbislNDFzdHJvcyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=bWxiXzEzXyU1NGV4YXMrJTUyYW5nZXJzI3Nwb3J0c0Bncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285F4&color=%23F09300" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" hidden></iframe>
+
+    <iframe id="NHL" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%239E69AF&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=bmhsXzlfJTQ0YWxsYXMrJTUzdGFycyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" hidden></iframe>
+
+<script>
+  function changeCalendar() {
+      var selectedCalendar = document.getElementById('calendarSelector').value;
+      
+      if (selectedCalendar === 'NFL') {
+          document.getElementById('NFL').removeAttribute('hidden');
+          document.getElementById('MLB').setAttribute('hidden', true);
+          document.getElementById('NHL').setAttribute('hidden', true);
+      } else if (selectedCalendar === 'MLB') {
+          document.getElementById('NFL').setAttribute('hidden', true);
+          document.getElementById('MLB').removeAttribute('hidden');
+          document.getElementById('NHL').setAttribute('hidden', true);
+      } else if (selectedCalendar === 'NHL') {
+          document.getElementById('NFL').setAttribute('hidden', true);
+          document.getElementById('MLB').setAttribute('hidden', true);
+          document.getElementById('NHL').removeAttribute('hidden');
+      }
+  }
+</script>
 </html>
