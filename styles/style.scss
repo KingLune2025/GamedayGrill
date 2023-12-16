@@ -62,10 +62,12 @@ body.border1{
     width: auto;
     opacity: 45%;
 }
-.homePageHeader{
-    font-weight: 600;
-    font-size: 120px;
+p.homePageHeader{
+    font-family: 'Bebas Neue', sans-serif;;
+    font-weight: 800;
+    font-size: 200px;
     border-color: white;
+    margin-top: 0;
 }
 
 @media (min-aspect-ratio: 16/9){
@@ -83,13 +85,16 @@ body.border1{
 }
 
 .colA{
-    float: left;
-    width: 50%; /* Each column takes 50% of the width */
+   // float: left;
+    width: 100%;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
 }
 
+.scrollGIF{
+    margin-top: -60px;
+}
 .homeImg{
     max-width: 90%;
     //height: auto;
@@ -105,7 +110,7 @@ body.border1{
     border: 100px solid transparent;
     border-image: url(images/border.png) 10% stretch;
     height: 100%;
-    width: auto;
+    width: 100%;
     box-sizing:border-box;
     position: fixed;
     z-index: 10;
@@ -117,6 +122,7 @@ body.border1{
   
   .scrollableContainer {
     overflow-y: auto;
+    margin: auto;
     height: 100%;
    padding-left: 15px;
    margin-top: 85px; /* Adjust the margin to match the border width */
