@@ -4,8 +4,12 @@
 }
 
 header.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   margin: -90px;
   padding-top: 15px;
 }
@@ -53,30 +57,38 @@ body.border1 {
   opacity: 45%;
 }
 
-.homePageHeader {
-  font-weight: 600;
-  font-size: 120px;
+p.homePageHeader {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 800;
+  font-size: 200px;
   border-color: white;
+  margin-top: 0;
 }
 
-@media (min-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 16 / 9) {
   .videoPlayer {
     width: 100%;
     height: auto;
   }
 }
-@media (max-aspect-ratio: 16/9) {
+
+@media (max-aspect-ratio: 16 / 9) {
   .videoPlayer {
     width: auto;
     height: 100%;
   }
 }
+
 .colA {
-  float: left;
-  width: 50%; /* Each column takes 50% of the width */
-  box-sizing: border-box;
-  margin: 0 auto;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
   text-align: center;
+}
+
+.scrollGIF {
+  margin-top: -60px;
 }
 
 .homeImg {
@@ -84,7 +96,7 @@ body.border1 {
 }
 
 * {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .megaContainer {
@@ -93,24 +105,29 @@ body.border1 {
   -o-border-image: url(images/border.png) 10% stretch;
      border-image: url(images/border.png) 10% stretch;
   height: 100%;
-  width: auto;
-  box-sizing: border-box;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: fixed;
   z-index: 10;
 }
 
 .scrollableContainer {
   overflow-y: auto;
+  margin: auto;
   height: 100%;
   padding-left: 15px;
-  margin-top: 85px; /* Adjust the margin to match the border width */
-  box-sizing: border-box;
+  margin-top: 85px;
+  /* Adjust the margin to match the border width */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   z-index: 99;
 }
 
 .navbar {
   background-color: transparent;
 }
+
 .navbar ul {
   display: block;
   list-style-type: none;
@@ -123,38 +140,46 @@ body.border1 {
   margin: 0px;
   overflow: hidden;
 }
+
 .navbar img {
   position: absolute;
   right: 100%;
   top: 10%;
 }
+
 .navbar li {
   float: left;
   padding-right: 40px;
 }
+
 .navbar li a {
   color: grey;
   text-decoration: none;
   padding: 10px;
   display: block;
   text-align: left;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
+
 .navbar li a .address {
   margin-left: auto;
 }
+
 .navbar li a.active {
   color: white;
 }
+
 .navbar li a::after {
-  content: "";
+  content: '';
   width: 0;
   height: 2px;
   background: orange;
   display: block;
+  -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
+
 .navbar li a:hover::after {
   width: 100%;
 }
@@ -165,6 +190,7 @@ body.border1 {
   padding-left: 5px;
   padding-right: 5px;
 }
+
 .social img {
   width: 30px;
   height: 30px;
@@ -176,13 +202,16 @@ nav.socials img {
 }
 
 .body {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
+
 .body .map {
   width: 100%;
 }
+
 @media (min-width: 1000px) {
   .body .location {
     width: 50%;
@@ -203,11 +232,13 @@ nav.socials img {
 .majorevents {
   text-align: center;
 }
+
 .majorevents .calendar {
   width: 50%;
   float: right;
   padding-bottom: 60px;
 }
+
 .majorevents .questions {
   width: 50%;
   float: left;
@@ -222,6 +253,7 @@ footer {
   height: 50px;
   background-color: transparent;
 }
+
 @media (max-width: 500px) {
   footer img.logo {
     position: absolute;
@@ -231,6 +263,7 @@ footer {
     width: 50px;
   }
 }
+
 @media (min-width: 500px) {
   footer img.logo {
     position: absolute;
@@ -240,20 +273,24 @@ footer {
     width: 60px;
   }
 }
+
 footer .eat {
   padding-top: 10px;
   padding-left: 5px;
   float: left;
   color: white;
 }
+
 footer .eat :hover {
   color: red;
 }
+
 footer .soc {
   padding-top: 10px;
   float: right;
   color: white;
 }
+
 footer .soc :hover {
   color: red;
 }
@@ -266,6 +303,7 @@ p {
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   display: inline-block;
   -moz-user-select: none;

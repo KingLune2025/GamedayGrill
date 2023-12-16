@@ -9,10 +9,13 @@
         <title>GameDay Bar and Grill</title>
         <link rel="stylesheet"type="text/css" href="styles/style.css" />
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@1,500&display=swap" rel="stylesheet">
 
     </head>
     <body onload="startFont()" class="border1">
-        <div class="video-container" style="background-color:darkkhaki;">
+        <div class="video-container" style="background-color:black;">
             
             <video autoplay muted loop id="myVideo" class="videoPlayer">
                 <source src="styles/videos/background_video.mp4" type="video/mp4">
@@ -52,21 +55,90 @@
             </a></button>
             
         <div class="scrollableContainer"> <!-- everything is gonna be inside this, copy this template and only replace the lorem ipsum stuff-->
+           
+
+            <!-- <div class="colA">
+                <span style="white-space: pre-line">
+                <p class="homePageHeader">Game 
+                    Day 
+                    Grill
+                </p>
+                </span>
+                <br> -->
+                <!-- <br> -->
+                <!-- <h1>-insert tagline-</h1> -->
+                <!-- </div> -->
             <a id="scrolltop"></a>
             <div class="colA">
-                <p class="homePageHeader">Game Day Grill</p>
-                <h1>-insert tagline-</h1>
-            </div>
-            <div class="colA">
-                <p><img src="styles/images/res img 4.jpg" class="homeImg"></p>
-                <p><img src="styles/images/res img 3.jpg" class="homeImg"></p>
-                <p><img src="styles/images/res img 2.jpg" class="homeImg"></p>
-                <p><img src="styles/images/res img 1.jpg" class="homeImg"></p>
+                <p><img src="styles/images/heading (2).png" style="height: auto; width: 1100px;"></p>
+                <p><img src="styles/images/scroll.gif" style="height: auto; width: 200px;" class="scrollGIF"></p>
+               <!-- <p style="color: transparent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam voluptas similique delectus dolores impedit optio dolore, harum facilis omnis debitis consequatur ad. Iusto quia ipsam assumenda, dicta praesentium voluptas voluptate commodi ullam, voluptatum, ex deleniti eius accusamus perferendis? Natus, culpa. Autem rem beatae ipsam recusandae ipsum quae cum magnam libero asperiores nobis provident placeat vitae labore aspernatur eaque, temporibus ducimus optio amet ut suscipit, dicta doloremque vel? Sint, quisquam quibusdam.</p> -->
+               <!-- <p class="homePageHeader">Game 
+                Day 
+                Grill
+            </p> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="background: lightgray; margin: auto; width: 90%; height: 80vh; border-radius: 20px;" ></div>
+
+                <!-- Slideshow container -->
+            
+
+    <!-- Full-width images with number and caption text -->
+    
+    
+    <div class="slideshow-container">
+ 
+         <div class="mySlides fade" style="margin: -75vh;">
+           
+  
+      <img src="styles/images/res img 4.jpg" style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes">
+      <div class="numbertext">1 / 4</div>
+      <div class="text"></div>
+    </div>
+  
+    <div class="mySlides fade" style="margin: -75vh;">
+      <img src="styles/images/img res 5.jpeg"style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes">
+      <div class="numbertext">2 / 4</div>
+      <div class="text"></div>
+    </div>
+  
+    <div class="mySlides fade" style="margin: -75vh;">
+      <img src="styles/images/img res 6.jpg" style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes"  >
+      <div class="text"></div>
+      <div class="numbertext">3 / 4</div>
+
+    </div>
+    <div class="mySlides fade" style="margin: -75vh;">
+        <img src="styles/images/res img 1.jpg" style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes" >
+        <div class="text"></div>
+        <div class="numbertext">4 / 4</div>
+
+      </div>
+  
+  </div>
+
+
+  
+  <!-- The dots/circles -->
+  <!-- <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    
+    
+  </div> -->
                 
                 
-                
-            </div>
+    </div>
             <p style="color:transparent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, possimus similique. Nostrum facere magnam assumenda sapiente totam quis excepturi. Doloribus aut sit distinctio quas reiciendis lkj;lkajs;dflkja;slkdjf;affffffffffffffffff.</p>
+            
         </div>
 
 
@@ -130,5 +202,78 @@ return result;
 
     </a></button>
     </body>
+
+    <script>
+       
+
+
+        let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+// let sliderImages = document.querySelectorAll(".slide"),
+//   arrowLeft = document.querySelector("#arrow-left"),
+//   arrowRight = document.querySelector("#arrow-right"),
+//   current = 0;
+
+// // Clear all images
+// function reset() {
+//   for (let i = 0; i < sliderImages.length; i++) {
+//     sliderImages[i].style.display = "none";
+//   }
+// }
+
+// // Init slider
+// function startSlide() {
+//   reset();
+//   sliderImages[0].style.display = "block";
+// }
+
+// // Show prev
+// function slideLeft() {
+//   reset();
+//   sliderImages[current - 1].style.display = "block";
+//   current--;
+// }
+
+// // Show next
+// function slideRight() {
+//   reset();
+//   sliderImages[current + 1].style.display = "block";
+//   current++;
+// }
+
+// // Left arrow click
+// arrowLeft.addEventListener("click", function() {
+//   if (current === 0) {
+//     current = sliderImages.length;
+//   }
+//   slideLeft();
+// });
+
+// // Right arrow click
+// arrowRight.addEventListener("click", function() {
+//   if (current === sliderImages.length - 1) {
+//     current = -1;
+//   }
+//   slideRight();
+// });
+
+// startSlide();
+
+
+document.querySelector('myVideo').playbackRate = 0.1;
+
+    </script>
     
 </html>

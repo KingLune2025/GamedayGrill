@@ -1,191 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GameDay Bar and Grill</title>
-    <link rel="stylesheet"type="text/css" href="styles/style.css" />
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <style>
-      div.megaContainer
-      {
-       width: 100%;
-      }
-      div.scrollableContainer
-      {
-        fieldset 
-        {
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          padding: 15px;
-          margin: 20px;
-        }
-        .questions div 
-        {
-          margin-bottom: 15px;
-        }
-        label
-        {
-          display: block;
-          margin-bottom: 5px;
-        }
-        input, select, button 
-        {
-          width: 100%;
-          padding: 8px;
-          box-sizing: border-box;
-        }
-        button
-        {
-          background-color: #4CAF50;
-          color: white;
-          padding: 10px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-        button:hover
-        {
-          background-color: #45a049;        
-        }
-      }
-    </style>
-  </head>
-  <body onload="startFont()" class="border1">
-      <div class="megaContainer"> 
-          <header class="top">
-            
-            <div class="popup" onclick="myFunction()"><img class="access" src = "styles/images/Accessibility.png" width="75" height="75">
-              <span class="popuptext" id="myPopup">Accessibility <hr>
-                <p class="haha">Text Size </p><br>
-                <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('large')">
-                <label for="text-off">small</label>
-                <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('xx-large')">
-                <label for="text-on">large</label>
-             
-              </span>
-            </div>
 
-              <nav class="navbar">
-                  <ul>
-                    <li><a href="index.html"><p>Home</p></a></li>
-                    <li><a href="ordering.html"><p>Ordering</p></a></li>
-                    <li><a href="Major Events.html" class="active"><p>Booking</p></a></li>
-                    <li><a href="contact.html"><p>Contact Us</p></a></li>
-                    <li><a class="address" href="https://www.google.com/maps/place/Liberty+High+School/@33.1392208,-96.7426835,15z/data=!4m6!3m5!1s0x864c16238f9f10f9:0xbed7791af12d9a8!8m2!3d33.1392208!4d-96.7426835!16zL20vMGdwbXh3?entry=ttu" target="_blank"><p>Location</p></a></li>
-                    <!-- I am gonna add the restaurant name on the top too, however me first design in canva and then integrate -->
-                  </ul>
-              </nav>
-          </header>
-          <div class="scrollableContainer"> <!-- everything is gonna be inside this, copy this template and only replace the lorem ipsum stuff-->
-            <a id="scrolltop"></a>
-            <div class="majorevents">
-            <form id="myForm" class="questions" action="results.html">
-              <fieldset>
-                <legend>Reseveration</legend>
-                <div>
-                  <label for="fname">First & Last Name</label>
-                  <input type="text" name="name" id="fname" placeholder="Your First & Last Name.." required>
-                </div>
-                <div>
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="Email" placeholder="Email.." required>
-                </div>
-                <div>
-                  <label for="phone">Phone</label>
-                  <input type="tel" name="phone" id="phone" required placeholder="##########">
-                </div>
-                <div>
-                  <label for="Time"> Time:
-                    <select id="Time" name="Time" required>
-                      <option value="10:00 AM">10:00 AM</option>
-                      <option value="11:30 AM">11:30 AM</option>
-                      <option value="1:00 PM">1:00 PM</option>
-                      <option value="2:30 PM">2:30 PM</option>
-                      <option value="4:00 PM">4:00 PM</option>
-                      <option value="5:30 PM">5:30 PM</option>
-                      <option value="7:00 PM">7:00 PM</option>
-                      <option value="8:30 PM">8:30 PM</option>
-                      <option value="10:00 PM">10:00 PM</option>
-                    </select>
-                  </label>
-                </div>
-                <div>
-                  <label for="date">Booking Date</label>
-                  <input type="date" name="date" id="date" min="2023-12-16" required>
-                </div>
-                <div>
-                  <label for="#OfPeople"># of people</label>
-                  <input id="#OfPeople" name="Number of People" type="number" min="1" max="99" required placeholder="##">
-                </div>
-                <button>Submit</button>
-              </fieldset>
-            </form>
-          </div>
-          
-        </script>
-	        <script src="index.js"></script>
-        </div>
-        <footer>
-            <nav class="socials"> 
-                <ul>
-                    <li>
-                      <a class="eat" href="https://www.ubereats.com/" target="_blank"><iconify-icon icon="simple-icons:ubereats" style="color: white;" width="40" height="40"></iconify-icon> </a>
-                      <a class="eat"href="https://www.grubhub.com/" target="_blank"><iconify-icon icon="simple-icons:grubhub" style="color: white;" width="40" height="40"></iconify-icon></a>
-                      <img class="logo" src="styles/images/logo.png">
-                        
-                        <a class="soc" href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"> <iconify-icon icon="line-md:instagram" style="color: white;" width="40" height="40"></iconify-icon> </a>
-                        <a class="soc" href="https://www.facebook.com/LHSRedhawks/" target="_blank"> <iconify-icon icon="il:facebook" style="color: white;" width="40" height="40"></iconify-icon>  </a>
-                        <a class="soc" href="https://twitter.com/LHSRedhawks" target="_blank"><iconify-icon icon="line-md:twitter-x" style="color: white;" width="40" height="40"></iconify-icon>   </a>
-                      </li>
-                </ul>
-            </nav>
-        </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GameDay Bar and Grill</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <div class="video-container" style="background-color:white;">
+            
+    <video autoplay muted loop id="myVideo" class="static">
+        <source src="styles/videos/black_texture.mp4" type="video/mp4">
+    </video>
+  <style>
+    div.megaContainer {
+      width: 100%;
+    }
+
+    div.scrollableContainer {
+      fieldset {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px;
+      }
+
+      .questions {
+        margin-bottom: 15px;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .Calendar {
+        width: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body onload="startFont()" class="border1">
+  <div class="megaContainer">
+    <header class="top">
+
+      <div class="popup" onclick="myFunction()"><img class="access" src="styles/images/Accessibility.png" width="75"
+          height="75">
+        <span class="popuptext" id="myPopup">Accessibility
+          <hr>
+          <p class="haha">Text Size </p><br>
+          <input type="radio" id="text-off" name="text" value="off" onclick="changeFont('large')">
+          <label for="text-off">small</label>
+          <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('xx-large')">
+          <label for="text-on">large</label>
+
+        </span>
       </div>
-      <script>
-  
-        function startFont()
-        {
-          if (document.cookie == "") {
-            document.cookie = "fontSize=large;path=/;";
-          var root = document.documentElement;
-          root.style.setProperty('--fontSize', 'large');
-       }
-          else
-          {
-          var root = document.documentElement;
-          root.style.setProperty('--fontSize', getCookie('fontSize'));
-        }
-      }
-      
-      function getCookie(name) {
-        const cDecoded = decodeURIComponent(document.cookie);
-        const cArray = cDecoded.split("; ");
-        cArray.forEach(element => {
-          if(element.indexOf(name) == 0) {
-            result = element.substring(name.length+1)
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">
+              <p>Home</p>
+            </a></li>
+          <li><a href="ordering.html">
+              <p>Ordering</p>
+            </a></li>
+          <li><a href="Major Events.html" class="active">
+              <p>Booking</p>
+            </a></li>
+          <li><a href="contact.html">
+              <p>Contact Us</p>
+            </a></li>
+          <li><a class="address"
+              href="https://www.google.com/maps/place/Liberty+High+School/@33.1392208,-96.7426835,15z/data=!4m6!3m5!1s0x864c16238f9f10f9:0xbed7791af12d9a8!8m2!3d33.1392208!4d-96.7426835!16zL20vMGdwbXh3?entry=ttu"
+              target="_blank">
+              <p>Location</p>
+            </a></li>
+          <!-- I am gonna add the restaurant name on the top too, however me first design in canva and then integrate -->
+        </ul>
+      </nav>
+    </header>
+    <div class="scrollableContainer">
+      <!-- everything is gonna be inside this, copy this template and only replace the lorem ipsum stuff-->
+            <a id="scrolltop"></a>
+        <div class="questions" style="float: left;">
+        <form id="myForm" action="results.html">
+          <fieldset>
+            <legend>Reseveration</legend>
+            <div>
+              <label for="fname">First & Last Name</label>
+              <input type="text" name="name" id="fname" placeholder="Your First & Last Name.." required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" placeholder="Email.." required>
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" required placeholder="##########">
+            </div>
+            <div>
+              <label for="Time"> Time:
+                <select id="Time" name="Time" required>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:30 AM">11:30 AM</option>
+                  <option value="1:00 PM">1:00 PM</option>
+                  <option value="2:30 PM">2:30 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                  <option value="5:30 PM">5:30 PM</option>
+                  <option value="7:00 PM">7:00 PM</option>
+                  <option value="8:30 PM">8:30 PM</option>
+                  <option value="10:00 PM">10:00 PM</option>
+                </select>
+              </label>
+            </div>
+            <div>
+              <label for="date">Booking Date</label>
+              <input type="date" name="date" id="date" min="2023-12-16" required>
+            </div>
+            <div>
+              <label for="#OfPeople"># of people</label>
+              <input id="#OfPeople" name="Number of People" type="number" min="1" max="99" required placeholder="##">
+            </div>
+            <button>Submit</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="questions" style="float: right;">
+        <label for="calendarSelector">Select Sport:</label>
+        <select id="calendarSelector" onchange="changeCalendar()">
+          <option value="NFL" selected>NFL</option>
+          <option value="MLB">MLB</option>
+          <option value="NHL">NHL</option>
+        </select>
+        <div id="calendarContainer">
+          <iframe id="NFL"
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23F4511E&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=bmZsXzZfJTQ0YWxsYXMrJTQzb3dib3lzI3Nwb3J0c0Bncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=bmZsXzM0XyU0OG91c3RvbislNTRleGFucyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33&color=%23A79B8E"
+            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+          <iframe id="MLB"
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23C0CA33&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=bWxiXzE4XyU0OG91c3RvbislNDFzdHJvcyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=bWxiXzEzXyU1NGV4YXMrJTUyYW5nZXJzI3Nwb3J0c0Bncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%234285F4&color=%23F09300"
+            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" hidden></iframe>
+
+          <iframe id="NHL"
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%239E69AF&ctz=America%2FChicago&showTitle=0&showNav=1&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=bmhsXzlfJTQ0YWxsYXMrJTUzdGFycyNzcG9ydHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73"
+            style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no" hidden></iframe>
+        </div>
+        <script>
+          function changeCalendar() {
+            var selectedCalendar = document.getElementById('calendarSelector').value;
+            if (selectedCalendar === 'NFL') {
+              document.getElementById('NFL').removeAttribute('hidden');
+              document.getElementById('MLB').setAttribute('hidden', true);
+              document.getElementById('NHL').setAttribute('hidden', true);
+            }
+            else if (selectedCalendar === 'MLB') {
+              document.getElementById('NFL').setAttribute('hidden', true);
+              document.getElementById('MLB').removeAttribute('hidden');
+              document.getElementById('NHL').setAttribute('hidden', true);
+            }
+            else if (selectedCalendar === 'NHL') {
+              document.getElementById('NFL').setAttribute('hidden', true);
+              document.getElementById('MLB').setAttribute('hidden', true);
+              document.getElementById('NHL').removeAttribute('hidden');
+            }
           }
-        })
-        return result;
-      }
-      
-       function changeFont(size)
-       {
-          document.cookie = "fontSize="+size+";path=/";
-        var root = document.documentElement;
-          root.style.setProperty('--fontSize', size);
-        }
-      // When the user clicks on div, open the popup
-      function myFunction() {
-        var popup = document.getElementById("myPopup");
-        
-          popup.classList.toggle("show");
-      }
         </script>
+      </div>
+</body>
+<script src="index.js"></script>
+</div>
+<footer>
+  <nav class="socials">
+    <ul>
+      <li>
+        <a class="eat" href="https://www.ubereats.com/" target="_blank"><iconify-icon icon="simple-icons:ubereats"
+            style="color: white;" width="40" height="40"></iconify-icon> </a>
+        <a class="eat" href="https://www.grubhub.com/" target="_blank"><iconify-icon icon="simple-icons:grubhub"
+            style="color: white;" width="40" height="40"></iconify-icon></a>
+        <img class="logo" src="styles/images/logo.png">
+
+        <a class="soc" href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading"
+          target="_blank"> <iconify-icon icon="line-md:instagram" style="color: white;" width="40"
+            height="40"></iconify-icon> </a>
+        <a class="soc" href="https://www.facebook.com/LHSRedhawks/" target="_blank"> <iconify-icon icon="il:facebook"
+            style="color: white;" width="40" height="40"></iconify-icon> </a>
+        <a class="soc" href="https://twitter.com/LHSRedhawks" target="_blank"><iconify-icon icon="line-md:twitter-x"
+            style="color: white;" width="40" height="40"></iconify-icon> </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+</div>
+<script>
+
+  function startFont() {
+    if (document.cookie == "") {
+      document.cookie = "fontSize=large;path=/;";
+      var root = document.documentElement;
+      root.style.setProperty('--fontSize', 'large');
+    }
+    else {
+      var root = document.documentElement;
+      root.style.setProperty('--fontSize', getCookie('fontSize'));
+    }
+  }
+
+  function getCookie(name) {
+    const cDecoded = decodeURIComponent(document.cookie);
+    const cArray = cDecoded.split("; ");
+    cArray.forEach(element => {
+      if (element.indexOf(name) == 0) {
+        result = element.substring(name.length + 1)
+      }
+    })
+    return result;
+  }
+
+  function changeFont(size) {
+    document.cookie = "fontSize=" + size + ";path=/";
+    var root = document.documentElement;
+    root.style.setProperty('--fontSize', size);
+  }
+  // When the user clicks on div, open the popup
+  function myFunction() {
+    var popup = document.getElementById("myPopup");
+
+    popup.classList.toggle("show");
+  }
+</script>
         <button id="myBtn"><a href="#scrolltop" style="color: white"><iconify-icon icon="ion:arrow-up-circle"
           width="40" height="40"></iconify-icon>
           </a>
         </button>
-    </body>
+</body>
+
 </html>
