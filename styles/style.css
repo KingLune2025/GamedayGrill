@@ -1,6 +1,6 @@
 :root {
   --fontSize:large;
-  --contrast:off;
+  --contrast:none;
   color: #FFFFFF;
 }
 
@@ -32,17 +32,15 @@ body.border1 {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  visibility: var(--contrast);
 }
 
 .videoPlayer {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
   opacity: 70%;
-  visibility: --co;
 }
 
 .static {

@@ -8,11 +8,7 @@
   <title>GameDay Bar and Grill</title>
   <link rel="stylesheet" type="text/css" href="styles/style.css" />
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <div class="video-container" style="background-color:grey;">
-            
-    <video autoplay muted loop id="myVideo" class="static">
-        <source src="styles/videos/black_texture.mp4" type="video/mp4">
-    </video>
+ 
   <style>
     div.megaContainer {
       width: 100%;
@@ -66,6 +62,12 @@
 </head>
 
 <body onload="startFont()" class="border1">
+  <div class="video-container" style="background-color:grey;">
+            
+    <video autoplay muted loop id="myVideo" class="static">
+        <source src="styles/videos/black_texture.mp4" type="video/mp4">
+    </video>
+    </div>
   <div class="megaContainer">
     <header class="top">
 
@@ -111,7 +113,7 @@
         <div class="questions" style="float: left;">
         <form id="myForm" action="results.html">
           <fieldset>
-            <legend>Reseveration</legend>
+            <legend>Reservation</legend>
             <div>
               <label for="fname">First & Last Name</label>
               <input type="text" name="name" id="fname" placeholder="Your First & Last Name.." required>
@@ -193,7 +195,7 @@
         </script>
       </div>
 </body>
-<script src="index.js"></script>
+<script src="access.js"></script>
 </div>
 <footer>
   <nav class="socials">
@@ -217,43 +219,7 @@
   </nav>
 </footer>
 </div>
-<script>
 
-  function startFont() {
-    if (document.cookie == "") {
-      document.cookie = "fontSize=large;path=/;";
-      var root = document.documentElement;
-      root.style.setProperty('--fontSize', 'large');
-    }
-    else {
-      var root = document.documentElement;
-      root.style.setProperty('--fontSize', getCookie('fontSize'));
-    }
-  }
-
-  function getCookie(name) {
-    const cDecoded = decodeURIComponent(document.cookie);
-    const cArray = cDecoded.split("; ");
-    cArray.forEach(element => {
-      if (element.indexOf(name) == 0) {
-        result = element.substring(name.length + 1)
-      }
-    })
-    return result;
-  }
-
-  function changeFont(size) {
-    document.cookie = "fontSize=" + size + ";path=/";
-    var root = document.documentElement;
-    root.style.setProperty('--fontSize', size);
-  }
-  // When the user clicks on div, open the popup
-  function myFunction() {
-    var popup = document.getElementById("myPopup");
-
-    popup.classList.toggle("show");
-  }
-</script>
         <button id="myBtn"><a href="#scrolltop" style="color: white"><iconify-icon icon="ion:arrow-up-circle"
           width="40" height="40"></iconify-icon>
           </a>
