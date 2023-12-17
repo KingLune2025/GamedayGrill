@@ -22,8 +22,12 @@ html {
     height: 100%;
     margin: 0;
     
- }
+}
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body.border1{
     height: auto;
@@ -231,7 +235,7 @@ p.homePageHeader{
              width: 30px;
              height: 30px;
          }
-     }
+    }
 
 
 nav.socials{
@@ -329,12 +333,12 @@ footer{
                         color:red;
                     }
                 }
-}
-p{
-    font-size:var(--fontSize);
-}
-
+    }
     
+    p{
+        font-size:var(--fontSize);
+    }
+
 .popup {
     position: relative;
    
