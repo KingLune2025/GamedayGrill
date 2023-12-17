@@ -2,7 +2,7 @@ $shadow-color: rgba(0,0,0,0.2);
 
 :root{
     --fontSize:large;
-    --contrast:none;
+    --contrast:block;
     color:adjust-color($color: #FFFFFF);
 }
 
@@ -40,7 +40,7 @@ body.border1{
     height: 100%;
     overflow: hidden;
     z-index: -1;
-   
+    display: var(--contrast);
 }
 
 .videoPlayer {

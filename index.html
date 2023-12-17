@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@1,500&display=swap" rel="stylesheet">
 
     </head>
-    <body onload="startFont()" class="border1">
+    <body onload="startFont(); startContrast()" class="border1">
         <div class="video-container" style="background-color:black;">
             
             <video autoplay muted loop id="myVideo" class="videoPlayer">
@@ -34,6 +34,13 @@
                       <label for="notify-off">small</label>
                       <input type="radio" id="text-on" name="text" value="on" onclick="changeFont('xx-large')">
                       <label for="text-on">large</label>
+
+                      <p class="haha">Contrast </p><br>
+                <input type="radio" id="back-off" name="back" value="off" onclick="changeContrast('block')">
+                <label for="back-off">low</label>
+                <input type="radio" id="back-on" name="back" value="on" onclick="changeContrast('none')">
+                <label for="back-on">high</label>
+             
                     </span>
                   </div>
                   
