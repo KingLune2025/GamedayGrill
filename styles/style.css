@@ -93,6 +93,14 @@ p.homePageHeader {
   text-align: center;
 }
 
+.colB {
+  width: 33%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: auto;
+  text-align: center;
+}
+
 .scrollGIF {
   margin-top: -60px;
   margin-left: -10px;
@@ -272,8 +280,13 @@ footer img.logo {
 }
 
 footer .eat {
-  padding-top: 22px;
-  padding-left: 5px;
+  max-width: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+  position: absolute;
+  left: 0%;
+  top: 103%;
   float: left;
   color: white;
 }
@@ -283,7 +296,13 @@ footer .eat :hover {
 }
 
 footer .soc {
-  padding-top: 22px;
+  max-width: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+  position: absolute;
+  left: 97%;
+  top: 103%;
   float: right;
   color: white;
 }

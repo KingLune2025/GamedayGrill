@@ -98,6 +98,13 @@ p.homePageHeader{
     text-align: center;
 }
 
+.colB{
+    width: 33%;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+ }
+ 
 .scrollGIF{
     margin-top: -60px;
    // left: 60%;
@@ -328,8 +335,17 @@ footer{
         // }
         // }
         .eat{
-            padding-top: 22px;
-            padding-left: 5px;
+          //  padding-top: 22px;
+            //padding-left: 5px;
+          //  position: absolute;
+         // top: 103%;
+         max-width: 50px;
+         min-width: 50px;
+         max-height: 50px;
+         min-height: 50px;
+         position: absolute;
+        left: 0%;
+        top: 103%;
             float: left;
             color:white;
                     :hover{
@@ -338,8 +354,14 @@ footer{
         }
         
         .soc{
-            padding-top: 22px;
-            
+           // padding-top: 22px;
+           max-width: 50px;
+           min-width: 50px;
+           max-height: 50px;
+           min-height: 50px;
+           position: absolute;
+          left: 97%;
+          top: 103%;
             float: right;
             color:white;
                     :hover{
