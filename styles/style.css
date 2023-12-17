@@ -8,6 +8,7 @@
 header.top {
   display: flex;
   justify-content: left;
+  justify-content: left;
   margin: -90px;
   padding-top: 15px;
 }
@@ -16,6 +17,11 @@ html {
   scroll-behavior: smooth;
   height: 100%;
   margin: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body.border1 {
@@ -96,8 +102,7 @@ p.homePageHeader {
 .megaContainer {
   /* Fix the border in place */
   border: 100px solid transparent;
-  -o-border-image: url(images/border.png) 10% stretch;
-     border-image: url(images/border.png) 10% stretch;
+  border-image: url(images/border.png) 10% stretch;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -183,7 +188,6 @@ nav.socials img {
 }
 
 .body {
-  width: -moz-fit-content;
   width: fit-content;
   text-align: center;
 }
