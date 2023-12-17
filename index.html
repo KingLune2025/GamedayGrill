@@ -61,7 +61,7 @@
 
             </a></button>
             
-        <div class="scrollableContainer"> <!-- everything is gonna be inside this, copy this template and only replace the lorem ipsum stuff-->
+        <div class="scrollableContainer" style="max-width: 100%; overflow-x: hidden;"> <!-- everything is gonna be inside this, copy this template and only replace the lorem ipsum stuff-->
            
 
             <!-- <div class="colA">
@@ -105,26 +105,26 @@
            
   
       <img src="styles/images/res img 4.jpg" style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes">
-      <div class="numbertext">1 / 4</div>
+      <div class="numbertext" style="color: black;">1 / 4</div>
       <div class="text"></div>
     </div>
   
     <div class="mySlides fade" style="margin: -75vh;">
       <img src="styles/images/img res 5.jpeg"style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes">
-      <div class="numbertext">2 / 4</div>
+      <div class="numbertext" style="color: black;">2 / 4</div>
       <div class="text"></div>
     </div>
   
     <div class="mySlides fade" style="margin: -75vh;">
       <img src="styles/images/img res 6.jpg" style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes"  >
       <div class="text"></div>
-      <div class="numbertext">3 / 4</div>
+      <div class="numbertext" style="color: black;">3 / 4</div>
 
     </div>
     <div class="mySlides fade" style="margin: -75vh;">
         <img src="styles/images/res img 1.jpg" style="min-height:70vh; max-height: 70vh; min-width: 100vh; max-width: 100vh; border-radius: 20px" class="photosOfRes" >
         <div class="text"></div>
-        <div class="numbertext">4 / 4</div>
+        <div class="numbertext" style="color: black;">4 / 4</div>
 
       </div>
   
@@ -226,60 +226,9 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change image every 2 seconds
+  setTimeout(showSlides, 4000); 
 }
-// let sliderImages = document.querySelectorAll(".slide"),
-//   arrowLeft = document.querySelector("#arrow-left"),
-//   arrowRight = document.querySelector("#arrow-right"),
-//   current = 0;
-
-// // Clear all images
-// function reset() {
-//   for (let i = 0; i < sliderImages.length; i++) {
-//     sliderImages[i].style.display = "none";
-//   }
-// }
-
-// // Init slider
-// function startSlide() {
-//   reset();
-//   sliderImages[0].style.display = "block";
-// }
-
-// // Show prev
-// function slideLeft() {
-//   reset();
-//   sliderImages[current - 1].style.display = "block";
-//   current--;
-// }
-
-// // Show next
-// function slideRight() {
-//   reset();
-//   sliderImages[current + 1].style.display = "block";
-//   current++;
-// }
-
-// // Left arrow click
-// arrowLeft.addEventListener("click", function() {
-//   if (current === 0) {
-//     current = sliderImages.length;
-//   }
-//   slideLeft();
-// });
-
-// // Right arrow click
-// arrowRight.addEventListener("click", function() {
-//   if (current === sliderImages.length - 1) {
-//     current = -1;
-//   }
-//   slideRight();
-// });
-
-// startSlide();
-
-
-document.querySelector('myVideo').playbackRate = 0.1;
+document.querySelector('myVideo').playbackRate = 0.2;
 
     </script>
     
