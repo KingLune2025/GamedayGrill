@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fclose($csvFile);
 
     // Redirect back to the form
-    header('Location: your_form_page.html');
+    header('index.html');
     exit();
 }
 ?>
