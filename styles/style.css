@@ -8,7 +8,6 @@
 header.top {
   display: flex;
   justify-content: left;
-  justify-content: left;
   margin: -90px;
   padding-top: 15px;
 }
@@ -277,6 +276,7 @@ p {
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   display: inline-block;
   -moz-user-select: none;
