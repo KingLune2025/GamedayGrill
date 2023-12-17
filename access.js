@@ -14,14 +14,17 @@ function startFont()
     function startContrast()
       {
         if (document.cookie == "") {
-          document.cookie = "contrast-block;path=/;";
+          document.cookie = "contrast=block;path=/;";
+          document.cookie = "color=white;path/;";
         var root = document.documentElement;
         root.style.setProperty('--contrast', 'block');
+        root.style.setProperty('--color','white');
      }
         else
         {
         var root = document.documentElement;
         root.style.setProperty('--contrast', getCookie('contrast'));
+        root.style.setProperty('--color',getCookie('color'))
       }
     }
     function getCookie(name) {
@@ -45,8 +48,17 @@ function startFont()
       function changeContrast(contrast)
       {
         document.cookie = "contrast="+contrast+";path=/";
+        if (contrast == 'block')
+        {
+          document.cookie = "color=white;path=/";
+        }
+        else
+        {
+          document.cookie = "color=black;path=/";
+        }
       var root = document.documentElement;
         root.style.setProperty('--contrast', contrast);
+        root.style.setProperty('--color', getCookie('color'));
       }
     // When the user clicks on div, open the popup
     function myFunction() {
