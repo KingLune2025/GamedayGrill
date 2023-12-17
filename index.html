@@ -9,6 +9,7 @@
         <title>GameDay Bar and Grill</title>
         <link rel="stylesheet"type="text/css" href="styles/style.css" />
         <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="access.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Slab:ital,wght@1,500&display=swap" rel="stylesheet">
@@ -77,7 +78,7 @@
                 <!-- </div> -->
             <a id="scrolltop"></a>
             <div class="colA">
-                <p><img src="styles/images/heading (2).png" style="height: auto; width: 1100px;"></p>
+                <p><img class="title" src="styles/images/heading (2).png" style="height: auto; width: 1100px;"></p>
                 <p><img src="styles/images/scroll.gif" style="height: auto; width: 200px;" class="scrollGIF"></p>
                <!-- <p style="color: transparent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam voluptas similique delectus dolores impedit optio dolore, harum facilis omnis debitis consequatur ad. Iusto quia ipsam assumenda, dicta praesentium voluptas voluptate commodi ullam, voluptatum, ex deleniti eius accusamus perferendis? Natus, culpa. Autem rem beatae ipsam recusandae ipsum quae cum magnam libero asperiores nobis provident placeat vitae labore aspernatur eaque, temporibus ducimus optio amet ut suscipit, dicta doloremque vel? Sint, quisquam quibusdam.</p> -->
                <!-- <p class="homePageHeader">Game 
@@ -189,7 +190,7 @@
                 <ul>
                     <li>
                       <a class="eat" style="left: 0%;" href="https://www.ubereats.com/" target="_blank"><iconify-icon icon="simple-icons:ubereats" style="color: white;" width="40" height="40"></iconify-icon> </a>
-                      <a class="eat" style="left: 3%;" href="https://www.grubhub.com/" target="_blank"><iconify-icon icon="simple-icons:grubhub" style="color: white;" width="40" height="40"></iconify-icon></a>
+                      <a class="eat" style="left: 4%;" href="https://www.grubhub.com/" target="_blank"><iconify-icon icon="simple-icons:grubhub" style="color: white;" width="40" height="40"></iconify-icon></a>
                       <img class="logo" src="styles/images/logo.png">
                         
                         <a class="soc" style="left: 97%;" href="https://www.instagram.com/lhs_redhawks/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank"> <iconify-icon icon="il:instagram" style="color: white;" width="40" height="40"></iconify-icon> </a>
@@ -200,44 +201,7 @@
             </nav>
         </footer>
         </div>
-        <script>
-                    
-            function startFont()
-{
-if (document.cookie == "") {
-  document.cookie = "fontSize=large;path=/;";
-var root = document.documentElement;
-root.style.setProperty('--fontSize', 'large');
-}
-else
-{
-var root = document.documentElement;
-root.style.setProperty('--fontSize', getCookie('fontSize'));
-}
-}
-function getCookie(name) {
-const cDecoded = decodeURIComponent(document.cookie);
-const cArray = cDecoded.split("; ");
-cArray.forEach(element => {
-if(element.indexOf(name) == 0) {
-  result = element.substring(name.length+1)
-}
-})
-return result;
-}
-            function changeFont(size)
-            {
-                document.cookie = "fontSize="+size+";path=/";
-                var root = document.documentElement;
-                root.style.setProperty('--fontSize', size);
-            }
-           // When the user clicks on div, open the popup
-           function myFunction() {
-             var popup = document.getElementById("myPopup");
-             
-               popup.classList.toggle("show");
-           }
-           </script>
+       
           
           <button id="myBtn"><a href="#scrolltop" style="color: white"><iconify-icon icon="ion:arrow-up-circle"
             width="40" height="40"></iconify-icon>
