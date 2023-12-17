@@ -3,7 +3,8 @@ $shadow-color: rgba(0,0,0,0.2);
 :root{
     --fontSize:large;
     --contrast:block;
-    color:adjust-color($color: #FFFFFF);
+    --color:white;
+    color: var(--color);
 }
 
 
@@ -409,6 +410,10 @@ p{
     /*On Hover Color Change*/
     #myBtn:hover {
         background-color: #7dbbf1;
+    }
+
+    .special{
+        color:var(--color);
     }
 
     

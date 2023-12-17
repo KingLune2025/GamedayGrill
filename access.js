@@ -17,11 +17,20 @@ function startFont()
           document.cookie = "contrast-block;path=/;";
         var root = document.documentElement;
         root.style.setProperty('--contrast', 'block');
+        root.style.setProperty('--color','white');
      }
         else
         {
         var root = document.documentElement;
         root.style.setProperty('--contrast', getCookie('contrast'));
+        if(getCookie('contrast') == 'block')
+        {
+        root.style.setProperty('--color','white');
+        }
+        else
+        {
+          root.style.setProperty('--color','black');
+        }
       }
     }
     function getCookie(name) {
@@ -47,6 +56,14 @@ function startFont()
         document.cookie = "contrast="+contrast+";path=/";
       var root = document.documentElement;
         root.style.setProperty('--contrast', contrast);
+        if(getCookie('contrast') == 'block')
+        {
+        root.style.setProperty('--color','white');
+        }
+        else
+        {
+          root.style.setProperty('--color','black');
+        }
       }
     // When the user clicks on div, open the popup
     function myFunction() {

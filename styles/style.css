@@ -1,7 +1,8 @@
 :root {
   --fontSize:large;
   --contrast:block;
-  color: #FFFFFF;
+  --color:white;
+  color: var(--color);
 }
 
 header.top {
@@ -336,4 +337,8 @@ p {
 /*On Hover Color Change*/
 #myBtn:hover {
   background-color: #7dbbf1;
+}
+
+.special {
+  color: var(--color);
 }/*# sourceMappingURL=style.css.map */
